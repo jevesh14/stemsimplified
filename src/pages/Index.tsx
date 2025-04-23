@@ -1,5 +1,5 @@
 
-import { Book, GameController, Layers } from "lucide-react";
+import { Book, Gamepad, Layers } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import CategoryCard from "@/components/CategoryCard";
 
@@ -22,7 +22,7 @@ const Index = () => {
     {
       title: "Games & Fun",
       description: "Interactive games and activities to make learning STEM fun",
-      icon: <GameController className="h-8 w-8" />,
+      icon: <Gamepad className="h-8 w-8" />,
       path: "/games",
       color: "border-blue-800"
     }
