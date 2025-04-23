@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import { Gamepad } from "lucide-react";
@@ -12,7 +11,8 @@ const Games = () => {
   const [score, setScore] = useState(0);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [completed, setCompleted] = useState(false);
-  
+  const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
+
   const quizQuestions = [
     {
       question: "What is the closest planet to the Sun?",
@@ -30,29 +30,33 @@ const Games = () => {
       correctAnswer: "Coal"
     }
   ];
-  
+
   const handleStartQuiz = () => {
     setShowQuiz(true);
     setScore(0);
     setCurrentQuestion(0);
     setCompleted(false);
+    setSelectedAnswer(null);
   };
-  
-  const handleAnswer = (selected: string) => {
-    if (selected === quizQuestions[currentQuestion].correctAnswer) {
-      setScore(score + 1);
+
+  const handleNext = () => {
+    if (selectedAnswer === quizQuestions[currentQuestion].correctAnswer) {
+      setScore(prev => prev + 1);
     }
-    
-    if (currentQuestion < quizQuestions.length - 1) {
-      setCurrentQuestion(currentQuestion + 1);
-    } else {
+
+    if (currentQuestion === quizQuestions.length - 1) {
       setCompleted(true);
+    } else {
+      setCurrentQuestion(prev => prev + 1);
     }
+
+    setSelectedAnswer(null); // reset for next question
   };
-  
+
   const handleReset = () => {
     setShowQuiz(false);
     setCompleted(false);
+    setSelectedAnswer(null);
   };
 
   return (
@@ -63,7 +67,7 @@ const Games = () => {
         <p className="text-gray-600 mb-8">
           Interactive games and activities to make learning STEM fun.
         </p>
-        
+
         <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           <Card className="transition-all hover:shadow-lg">
             <CardHeader>
@@ -94,16 +98,31 @@ const Games = () => {
                       {quizQuestions[currentQuestion].options.map((option, index) => (
                         <div 
                           key={index}
-                          className="flex items-center space-x-3 p-3 rounded-md border border-blue-200 hover:bg-blue-100 cursor-pointer"
-                          onClick={() => handleAnswer(option)}
+                          className={`flex items-center space-x-3 p-3 rounded-md border ${
+                            selectedAnswer === option ? "bg-blue-200" : "border-blue-200"
+                          } hover:bg-blue-100 cursor-pointer`}
+                          onClick={() => setSelectedAnswer(option)}
                         >
-                          <Checkbox id={`option-${index}`} />
+                          <Checkbox 
+                            id={`option-${index}`} 
+                            checked={selectedAnswer === option} 
+                          />
                           <label htmlFor={`option-${index}`} className="cursor-pointer flex-grow">
                             {option}
                           </label>
                         </div>
                       ))}
                     </div>
+                    {selectedAnswer && (
+                      <div className="text-right mt-4">
+                        <Button
+                          className="bg-blue-600 hover:bg-blue-700"
+                          onClick={handleNext}
+                        >
+                          Next
+                        </Button>
+                      </div>
+                    )}
                   </div>
                 </div>
               ) : (
@@ -147,7 +166,7 @@ const Games = () => {
               )}
             </CardFooter>
           </Card>
-          
+
           <Card>
             <CardHeader>
               <div className="flex items-center gap-3">
