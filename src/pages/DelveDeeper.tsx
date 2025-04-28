@@ -13,9 +13,21 @@ const DelveDeeper = () => {
         
         <div className="text-center py-16">
           <p className="text-gray-600">
-            Articles will appear here after you upload content.
+           {/*  print bold coming soon */}
+            <span className="font-bold">Coming Soon!</span>
           </p>
         </div>
+
+
+
+        <div className="text-center py-16">
+          <p className="text-gray-600">
+        
+          </p>
+        </div>
+
+
+
       </div>
     </div>
   );
