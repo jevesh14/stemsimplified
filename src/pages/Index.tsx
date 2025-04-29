@@ -64,27 +64,6 @@ const Index = () => {
           ))}
         </div>
       </div>
-
-      {/* Recent Articles Preview */}
-      <div className="container mx-auto px-4 py-16 bg-white rounded-lg shadow-sm my-16">
-        <div className="max-w-4xl mx-auto">
-          <div className="flex justify-between items-center mb-8">
-            <h2 className="text-2xl md:text-3xl font-bold text-blue-800">Recent Articles</h2>
-            <a 
-              href="/recent-articles" 
-              className="text-blue-600 hover:text-blue-800 transition-colors font-medium"
-            >
-              View all
-            </a>
-          </div>
-          
-          <div className="text-center py-12">
-            <p className="text-gray-600">
-              Articles will be displayed here after you upload content.
-            </p>
-          </div>
-        </div>
-      </div>
     </div>
   );
 };
