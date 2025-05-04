@@ -19,4 +19,12 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  optimizeDeps: {
+    include: ['@emailjs/browser'],
+  },
+  build: {
+    rollupOptions: {
+      external: ['@emailjs/browser'],
+    },
+  },
 }));
