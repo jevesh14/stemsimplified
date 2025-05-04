@@ -10,7 +10,6 @@ import NotFound from "./pages/NotFound";
 import BreakthroughBriefs from "./pages/BreakthroughBriefs";
 import DelveDeeper from "./pages/DelveDeeper";
 import Games from "./pages/Games";
-import Profile from "./pages/Profile";
 import About from "./pages/About";
 import RecentArticles from "./pages/RecentArticles";
 import ArticleRequests from "./pages/ArticleRequests";
@@ -28,7 +27,6 @@ const App = () => (
           <Route path="/breakthrough-briefs" element={<BreakthroughBriefs />} />
           <Route path="/delve-deeper" element={<DelveDeeper />} />
           <Route path="/games" element={<Games />} />
-          <Route path="/profile" element={<Profile />} />
           <Route path="/about" element={<About />} />
           <Route path="/recent-articles" element={<RecentArticles />} />
           <Route path="/article-requests" element={<ArticleRequests />} />

@@ -19,12 +19,6 @@ const Navbar = () => {
           <Link to="/about" className="text-blue-600 hover:text-blue-800 transition-colors">
             About
           </Link>
-          <Link to="/profile">
-            <Button variant="outline" className="flex items-center gap-2">
-              <User size={18} />
-              <span>Profile</span>
-            </Button>
-          </Link>
         </div>
         
         {/* Mobile menu button */}
