@@ -15,13 +15,13 @@ const ArticleRequests = () => {
 
     emailjs
       .send(
-        "service_t9gty7m",        // ✅ your service ID
-        "template_qde9lgg",       // 🔁 replace with your actual template ID
+        "service_t9gty7m",    
+        "template_qde9lgg",     
         {
           topic: topic,
           description: description,
         },
-        "dLB5rDPUqEO--3lw9"         // 🔁 replace with your EmailJS public API key
+        "dLB5rDPUqEO--3lw9"        
       )
       .then(() => {
         toast.success("Article request sent successfully!");
