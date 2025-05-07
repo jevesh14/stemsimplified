@@ -20,9 +20,10 @@ export default defineConfig(({ mode }) => ({
   optimizeDeps: {
     include: ["@emailjs/browser"],
   },
-  build: {
-    rollupOptions: {
-      external: ["@emailjs/browser"],
-    },
-  },
+  // ✅ REMOVE this block to allow bundling
+  // build: {
+  //   rollupOptions: {
+  //     external: ["@emailjs/browser"],
+  //   },
+  // },
 }));
