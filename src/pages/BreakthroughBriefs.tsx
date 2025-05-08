@@ -12,44 +12,55 @@ const articles = [
         heading: "Introduction",
         content: [
           "Major news from Tulane University: Researchers have developed an AI that instantly detects antibiotic resistance in bacteria.",
-          "Here's the kicker? This AI doesn't just speed things up—it could completely change the game when it comes to how we fight infections.",
-          "Antibiotic resistance isn't some 'Future science problem.' It's a problem now—why diseases like tuberculosis and staph infections are getting harder to treat.",
-          "And this tech? It's like handing doctors a cheat code—an upgrade in how we understand and treat disease."
+          "Here’s the kicker? This AI doesn’t just speed things up—it could completely change the game when it comes to how we fight infections.",
+          "Because antibiotic resistance isn’t some “Future science problem.”  It’s a problem now. A problem why diseases like tuberculosis and staph infections are getting harder (and scarier) to treat",
+          "And this tech?  It’s like handing doctors a cheat code—an upgrade in how we understand and treat disease."
         ]
       },
       {
         heading: "What Happened?",
         content: [
-          "Tulane University Scientists have made a new Group Association Model (GAM)—a smart AI that finds patterns in bacterial DNA to detect antibiotic resistance.",
-          "Think of GAM like that one friend who spots drama from a mile away—it sees DNA clues and predicts if bacteria are drug-resistant.",
-          "Antibiotic resistance happens when some bacteria survive antibiotics due to DNA mutations and then multiply.",
-          "This makes previous treatments ineffective and infections more dangerous."
+          "Tulane University Scientists have made a new Group Association Model (GAM)- Basically, a super smart AI that can find patterns across a large set of data- that can find resistance to antibiotics in bacteria.",
+          "Think of GAM like that one friend who can spot drama from a mile away — it sees tiny clues in the DNA (mutations) and figures out if bacteria are about to cause trouble (resist drugs- which you should always do!)",
+          "Wait, wait, but what even is antibiotic resistance?",
+          "Well, here's a quick crash course:",
+          "In the past, people could take antibiotics to treat diseases like tuberculosis (TB) and staph.",
+          "Now they can’t. Why?",
+          "Over time, these bacteria have developed resistance to the drugs. How?",
+          "Antibiotics kill most bacteria, but some survive due to mutations in their DNA (now this is the problem). These resistant bacteria then reproduce, creating more bacteria that the antibiotic can’t kill. (Big Yikes!)",
+          "This means the antibiotics that used to work no longer do, making it much harder to treat these diseases."
         ]
       },
       {
         heading: "How Does It Work?",
         content: [
-          "GAM uses machine learning to find hidden patterns between DNA mutations and drug resistance.",
-          "It doesn’t just look for known mutations (like old tools). It compares DNA and resistance data across bacteria to find *real* causes of resistance.",
-          "This reduces false positives and improves diagnostic accuracy."
+          "Okay, imagine training a dog to do tricks",
+          "The New Group Association Model (GAM) uses machine learning-  a branch of AI where a model is trained on a large set of data to perform a task without being programmed step by step. Think of it as the training part of training the dog.",
+          "GAM uses machine learning to find genetic mutations linked to drug resistance (you know, the same kind of mutations I mentioned earlier, the ones that let some bacteria survive antibiotics.)",
+          "Current tools are basic, they at known mutations and try to find the same mutation in the bacteria. This leads to errors, because they freak over harmless mutations believing they're the reason for antibiotics’ resistance, just because they look similar to known ones",
+          "GAM is way smarter.",
+          "It looks through a large set of data (DNA) from different bacterias, and wether they are resistant to the antibiotic or not. It finds the pattern in which the mutations occur. GAM then compares bacteria with different resistance patterns to find genetic changes that show resistance to specific drugs."
         ]
       },
       {
         heading: "Why does it matter?",
         content: [
-          "In 2021, 450,000 people developed multidrug-resistant TB, with only a 57% treatment success rate.",
-          "GAM outperforms WHO's current detection methods and can help doctors treat infections faster—and save lives.",
-          "Read more at ScienceDaily’s article linked below."
+          "Well, because people die due to this, and the numbers are just UGLY.",
+          "In 2021, 450,000 people developed multidrug-resistant tuberculosis, and treatment success rates dropped to JUST 57%.",
+          "Right now, other methods are slow, inaccurate, and miss rare mutations. While this treatment is proven to outperform WHO’s current resistance detection.",
+          "And this tech?",
+          "It helps doctors find the correct treatment before it too late, it helps doctors save lives",
+          "If you want to read more, check out Researchers use AI to improve diagnosis of drug-resistant infections | ScienceDaily"
         ]
       }
     ],
     sources: [
       {
-        text: 'Tulane University. “Researchers Use AI to Improve Diagnosis of Drug-Resistant Infections." Science Daily, Apr. 2025.',
+        text: "Tulane University. “Researchers Use AI to Improve Diagnosis of Drug-Resistant Infections.” Science Daily, Apr. 2025.",
         url: "https://www.sciencedaily.com/releases/2025/04/250407173027.htm"
       },
       {
-        text: "Saliba, Julian G., et al. “Enhanced Diagnosis of Multi-Drug-Resistant Microbes Using Group Association Modeling and Machine Learning.” Nature Communications, 2025."
+        text: "Saliba, Julian G., et al. “Enhanced Diagnosis of Multi-Drug-Resistant Microbes Using Group Association Modeling and Machine Learning.” Nature Communications, vol. 16, no. 1, 2025, p. 2933, doi:10.1038/s41467-025-58214-6."
       }
     ]
   },
@@ -61,42 +72,44 @@ const articles = [
       {
         heading: "Introduction",
         content: [
-          "CERN just proved your phone can help solve antimatter mysteries.",
-          "Scientists at TUM created a device using smartphone sensors that detects antimatter annihilation with high precision."
+          "What if I told you that the phone in your pocket could help solve one of the biggest discoveries of the universe? CERN has just dropped a breakthrough: your smartphone camera sensors are transformed into powerful detectors that can track antimatter. Yup, you read it right. A team from the AEgIS(Antihydrogen Experiment: Gravity,Interferometry, Spectroscopy ) collaboration, led by researchers at the Technical University of Munich (TUM), created a device that can track when antimatter particles (which usually vanish on contact with normal matter disappear) annihilate and that too with great precision."
         ]
       },
       {
-        heading: "Matter vs Antimatter",
+        heading: "What happened ?",
         content: [
-          "Antimatter is the mirror image of regular matter—same mass, opposite charge.",
-          "When matter and antimatter meet, they annihilate.",
-          "Understanding antimatter helps answer why the universe exists at all (instead of canceling itself out)."
+          "Now, you must be thinking, what’s the deal with antimatter and why is it important to understand it?",
+          "Basically, antimatter is the mirror image of regular matter. Every particle in the universe such as electrons and protons has an oppositely charged counterpart which is the antiparticle. For example, the counterpart of the negatively charged electron is the positively charged positron (which is a positively charged mirror image of the electron). When matter and antimatter come into contact, they annihilate each other(disappearing). An antiparticle is made up of an antiproton(which is the negatively charged mirror image of a proton.)which is the antimatter equivalent of a proton and a positron which is the antimatter equivalent of an electron.",
+          "Simply put, Physicists are trying to understand antimatter because, according to theory, the Big Bang should have made equal amounts of matter and antimatter. Yet the observable universe (the universes you can see) is made almost entirely of matter. Understanding why this imbalance exists could answer one of the most fundamental questions in physics that is - why is there something rather than nothing?",
+          "Since antimatter doesn't naturally exist in large quantities near us, as it would instantly annihilate (disappear) if it came into contact with matter, therefore scientists have to create it in labs. At CERN’s Antimatter Factory, antiprotons are made by accelerating regular protons to near-light speed and smashing them into a metal target. This collision produces many new particles, including antiprotons. These antiprotons are then slowed down and combined with positrons (the same ones I explained earlier) to create antihydrogen, the antimatter counterpart of the hydrogen atom. These atoms are stored in vacuum traps using powerful magnetic fields to prevent them from touching the walls and annihilating(disappearing)."
         ]
       },
       {
-        heading: "How does it work?",
+        heading: "How does it work ?",
         content: [
-          "The AEgIS experiment tests how antihydrogen responds to gravity using moiré deflectometers and OPHANIM, a 3840-megapixel detector made from modified smartphone sensors.",
-          "The sensor tracks fragments created by antimatter annihilation to detect positions and behavior."
+          "The AEgIS experiment is trying to investigate whether antihydrogen falls under gravity in the same way as ordinary matter. According to Einstein’s theory of general relativity, all masses should experience gravity in the same way. But antimatter may behave differently, and this would totally change our understanding of gravity, space-time, and the early universe.",
+          "To test this, AEgIS creates a horizontal beam of antihydrogen atoms. As the beam travels forward, Earth’s gravity should cause it to fall slightly downward. Measuring this tiny vertical shift is the key challenge. To detect it, scientists use a setup called a moiré deflectometer. It is a tool scientists use to detect tiny changes in the path of a beam like a beam of atoms. It has three special plates, each with very tiny, evenly spaced slits and so it is like a super thin comb. When the beam passes through these slits, it forms a pattern of light and dark stripes called a moiré pattern. If the beam bends slightly maybe because of gravity then the pattern also shifts. By measuring how much the pattern moves, scientists can figure out how much and in which direction the beam was deflected. But since antihydrogen atoms annihilate when they hit any surface, scientists also have to detect the exact locations where these annihilations occur.",
+          "This is where the new detector comes in. Instead of directly observing the invisible antihydrogen atoms, the detector tracks the small fragments created by their annihilation, such as gamma rays released. These fragments hit the detector and leave identifiable marks and then researchers can trace back where the antihydrogen atom vanished.",
+          "To make this process more accurate, scientists reused high-resolution camera sensors from our smartphones. Smartphone sensors have extremely small pixels which are often smaller than 1 micrometre, which makes them perfect for capturing minute details. But to turn a phone camera into a particle detector, researchers had to remove the sensor’s upper layers, which in phones are designed to increase image quality and redesign the electronics to record particles instead of light. They assembled 60 such sensors into a single large detector called OPHANIM (Optical Photon and Antimatter Imager), which boasts 3840 megapixels which makes it the highest-resolution device of its kind today."
         ]
       },
       {
-        heading: "Why does it matter?",
+        heading: "Why does it matter ?",
         content: [
-          "This tech helps track antimatter precisely and could help in radiation detectors or medical imaging in the future."
+          "OPHANIM combines the strengths of old and new technologies. It takes the high resolution of traditional smartphone cameras and also supports real-time data collection of the annihilation. This device helps researchers to pinpoint where each antiproton or antihydrogen atom annihilates.",
+          "This new technology could be used in other fields. Beyond advancing antimatter research, it could be used in experiments that require precise tracking of particles, in the development of next-generation radiation detectors, or even in medical imaging technologies."
         ]
       },
       {
         heading: "Conclusion",
         content: [
-          "This breakthrough shows how everyday tech like phone cameras can solve fundamental physics questions.",
-          "It’s a step toward more accessible, high-impact science tools for the future."
+          "This discovery proves that technology and tools used in daily life can also be used to solve big universe mysteries. It shows that it is possible to use something as common as a smartphone for studying antimatter. This is a mark of a giant leap for science. Could this be the start of a future where anyone, anything,anywhere can help uncover secrets of the universe? Could your next phone come with a built-in particle detector? Maybe someday."
         ]
       }
     ],
     sources: [
       {
-        text: "TUM. \"Smartphone Photo Sensors Transformed into an Unprecedented Resolution Antimatter Camera.\" Science Daily, Apr. 2025.",
+        text: "Technical University of Munich (TUM). “Smartphone Photo Sensors Transformed into an Unprecedented Resolution Antimatter Camera.” Science Daily, Apr. 2025.",
         url: "https://www.sciencedaily.com/releases/2025/04/250402181314.htm"
       }
     ]
