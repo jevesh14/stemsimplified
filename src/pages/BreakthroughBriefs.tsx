@@ -113,7 +113,141 @@ const articles = [
         url: "https://www.sciencedaily.com/releases/2025/04/250402181314.htm"
       }
     ]
-  }
+  },
+  {
+    id: 3,
+    title: "The Soil Factor: Soil Saturation Triggers Floods",
+    author: "By Aishna Goyal",
+    sections: [
+      {
+        heading: "Introduction",
+        content: [
+          "Isn’t it hard to believe that one of the main factors affecting the impact of floods isn’t just the storm’s size, but also the pre-existing soil moisture before the rain even begins? In a new study, researchers simulated over 43,000 atmospheric river landfalls. These are long bands of concentrated moisture in the atmosphere carrying huge amounts of water vapor (like rivers in the sky) from tropical oceans, which are hitting the US West Coast as heavy rain/snow. They discovered that the wetness and type of soil contribute to the severity of floods. This finding helps prevent flood damage and predict disasters early on.",
+          "Note: Atmospheric Rivers provide the essential moisture required for the region, but are the main cause of flooding in the area."
+        ]
+      },
+      {
+        heading: "What happened?",
+        content: [
+          "Researchers fed data about atmospheric rivers, soil moisture levels and past flooding events to high-resolution computer models. These models worked like virtual laboratories, allowing scientists to simulate real-world scenarios for experiments and run controlled experiments. In this case, they created the model of atmospheric river landfalls and studied the cause-and-effect relationships of flooding events to predict future risks."
+        ]
+      },
+      {
+        heading: "What did scientists discover during the study?",
+        content: [
+          "Now, we all know that traditionally, flood risk was thought to depend mostly on the size and strength of a storm—the bigger the storm, the higher the flood risk. But this study showed that soil moisture can be just as important.",
+          "In fact, it was discovered that flood peaks were 2 to 4.5 times higher at places where the soil was already saturated (wet). Which is why sometimes, even a moderate storm caused severe flooding if the ground was wet. While in other areas, even heavy rain didn’t trigger flooding if the soil had high absorbent capacity or was dry.",
+          "", 
+          "",
+
+
+          
+          "So wait…"
+        ]
+      },
+      {
+        heading: "How on earth does that soil-wetness thingy even work?!",
+        content: [
+          "Well, don’t worry. This took me quite some research to figure out, too.",
+          "Yes. Ik, even with Chat GPT. But, Here’s How :)",
+          "Think of the soil as a Sponge. If the sponge is dry, it can soak up water easily. If it is damp, it can still absorb a bit more water, but once it's fully soaked and drenched in water… any extra water will just run off the surface.",
+          "This point – after which soil cannot absorb any more water, is known as the critical threshold of soil moisture wetness. In other words, the maximum capacity of wetness that the soil can uphold."
+        ]
+      },
+      {
+        heading: "So…why does it matter?",
+        content: [
+          "The thing is, this nature of soil helps us to determine the relationship between the risk of flooding and the wetness of sand.",
+          "Once the critical threshold of soil wetness is met, the risk of flooding rises suddenly, not gradually. This kind of relationship is called non-linear, where a small increase in wetness can lead to a large increase in flooding.",
+          "Therefore, since water has nowhere else to go but up once the soil reaches its saturation point, some floods can occur suddenly. This also means that areas with low water-absorbent levels in soil have a tendency to have unpredictable floods.",
+          "Yikes!"
+        ]
+      },
+      {
+        heading: "But, why is it important?",
+        content: [
+          "Understanding soil moisture is vital for creating better hydrologic models—these are computer models that simulate how water moves through the land. With this insight, flood forecasting can become more accurate and localized, helping communities better prepare for disasters.",
+          "As lead author of the study Mariana Webb said:",
+          "“It’s not only about the storm size and magnitude but also what’s happening on the land surface.”",
+          "The study also emphasizes the role of watersheds—areas of land where all water drains to a common outlet. By analyzing how different watersheds respond to moisture, we can optimize infrastructure, improve regional planning, and design better flood prevention systems based on the land’s unique characteristics."
+        ]
+      },
+      {
+        heading: "So… What’s next?",
+        content: [
+          "Better infrastructure, development in regional strategies, enhanced hydrologic models and more precise forecasts, and much more.",
+          "However, I have a question for you.",
+          "Do you think YOU could discover flood prevention methods in ways never yet explored? Is there another factor overlooked that is awaiting someone’s arrival to enlighten the world about it? Someone like you? Do you think YOU can find something new in this area?",
+          "What if you could dictate another breakthrough…"
+        ]
+      }
+    ],
+    sources: [
+      {
+        text: "Desert Research Institute. “Scientists Reveal the Hidden Trigger behind Massive Floods.” Science Daily, June 2025",
+        url: "https://www.sciencedaily.com/releases/2025/06/250614121958.htm"
+      }
+    ]
+  },
+  {
+    id: 4,
+    title: "Tiny Bugs, Infinite Potential",
+    author: "By Sandra Myat (Team Thiland)",
+    sections: [
+      {
+        heading: "Introduction",
+        content: [
+          "Let’s take a moment to appreciate how our noses aren’t clogged and our throats aren't hurting because, honestly, being sick is the worst and on par with hospital visits. But what if we're able to avoid those long hospital stays, painful treatments, and harsh side effects? What if instead a tiny robot could zoom through your veins and solve your problem? I know what you're thinking: \"A robot…inside my body?” Yes, but don't worry, it won't ask for your Apple Pay details or steal your Netflix password.",
+          "The concept of micro- and nanobots is not particularly new, as scientists have been developing it over the past two decades. These tiny robots can travel through your body to deliver medicine directly to the targeted source. This innovation can improve the risks and suffering experienced by a majority of terminally ill patients. Could this overall replace the need for surgery and chemotherapy?"
+        ]
+      },
+      {
+        heading: "What Happened?",
+        content: [
+          "Hey, why don't microbots ever gossip?",
+          "Probably because theyre too small to spread rumors",
+          "How do they work?",
+          "The microbots developed are engineered to navigate through the fluids inside our bodies and target medicine to specifically sick cells.",
+          "Think of them as delivery drivers, just like ordering food on Grab or packages through FedEx, but for your body instead. The shape of the robots is similar to the likes of a single red blood cell, as they are swift, tiny, and immediate. Researchers have clinically tested them on animals such as mice, which turned out successful in the end. If they can help mice heal, who’s to say we aren't next?"
+        ]
+      },
+      {
+        heading: "How Does It Work",
+        content: [
+          "What did the magnetic microbot say to the doctor?",
+          "“I’m attracted to healing”.",
+          "Now, Picture a small sail or boat that's essentially stretchy and made out of flexible/elastic materials that flow through your blood; that's essentially the microbot. Now, how do they work and function? These microbots can be produced from either magnets or chemical reactions. Ever tried plopping vinegar and soda or Coke and Mentos together? The same bubbling reaction is used for the bots to travel through your body.",
+          "For the magnetic-powered microbots, scientists essentially use magnetic fields to direct them to the problem, whether it be a tumor, cancerous cells, or an infection. Once they reach the destination, the microbots release the medical substance directly to the area."
+        ]
+      },
+      {
+        heading: "Why does it matter?",
+        content: [
+          "Most of the time the medicine put into our body is similar to tossing a message in a bottle into the ocean, hoping it reaches the shore. They might eventually reach the problem, but at what cost? These microbots are able to help patients and save them from their pains without suffering. In the cases of heart disease, cancer, and brain disorders, these microbots can travel through barriers in the blood-brain, arteries, and bloodstreams to precisely and accurately deliver medicine to the root of the problem. This helps the patients, as many treatments target the full body, which causes many side effects compared to the microbots going to the area only where the problem is."
+        ]
+      },
+      {
+        heading: "Conclusion",
+        content: [
+          "Although most people expect inventions such as flying cars, I’d say microbots aren’t as bad either, as researchers continue to improve and experiment with the precision and accuracy of these bots. With the current technologies and innovations, it’s not that far to dream of surgeries becoming less frequent, as one day many illnesses may simply be solved with the digestion of a simple pill. If you had a chance, would you consider trusting a microbot to heal you from the inside?"
+        ]
+      }
+    ],
+    sources: [
+      {
+        text: "Corder, Greg. “Tiny Robots Target Tumors with Precision Drug Delivery.” Medical Xpress, 19 Apr. 2024",
+        url: "https://medicalxpress.com/news/2024-04-tiny-robots-tumors-precision-drug.html"
+      },
+      {
+        text: "California Institute of Technology. “Microrobots Deliver Drugs Precisely Where Needed.” ScienceDaily, 19 Apr. 2024",
+        url: "https://www.sciencedaily.com/releases/2024/04/240419112245.htm"
+      },
+      {
+        text: "University of Hawaiʻi at Mānoa. “Tiny Robots Could Deliver Drugs in the Human Body.” University of Hawaiʻi News, 20 Mar. 2024",
+        url: "https://www.hawaii.edu/news/2024/03/20/tiny-robots-drug-delivery/"
+      }
+    ]
+  },
 ];
 
 const BreakthroughBriefs = () => {
