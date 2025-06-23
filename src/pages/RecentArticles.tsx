@@ -5,87 +5,73 @@ const RecentArticles = () => {
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
       <Navbar />
       <div className="container mx-auto px-4 py-10">
-        <h1 className="text-3xl md:text-4xl font-bold text-blue-900 mb-8">The most recent Article</h1>
+        <h1 className="text-3xl md:text-4xl font-bold text-blue-900 mb-8">
+          The most recent Article
+        </h1>
         <p className="text-gray-600 mb-8">
           Stay up to date with our latest STEM content across all categories.
         </p>
-        
+
         <article className="max-w-2xl mx-auto text-left bg-white bg-opacity-70 p-8 rounded shadow">
-          <h1 className="text-2xl font-bold mb-2">AI: 1, Antibiotic Resistance: 0</h1>
-          <p className="italic mb-6">By Lavanya Sharma</p>
+          <h1 className="text-2xl font-bold mb-2">The Future of Healthcare Is in Your Breath — Literally</h1>
+          <p className="italic mb-6">By Taksh Jain</p>
 
           <h2 className="text-xl font-semibold mt-8 mb-2">Introduction</h2>
           <p className="mb-4">
-            Major news from Tulane University: Researchers have developed an AI that <em>instantly</em> detects antibiotic resistance in bacteria.
+            Waiting to give a blood sample at the doctor’s office, you’ve probably wished there were a needle-free way to get the same info.
           </p>
           <p className="mb-4">
-            Here's the kicker! This AI doesn't just speed things up-it could completely change the game when it comes to how we fight infections. Because antibiotic resistance isn't some “Future science problem.”
+            Well, here we go, University of Chicago introduces a game-changer! A group of scientists created a portable device that can collect and detect airborne molecules. This device holds the potential to revolutionise the way diseases are detected and treated.
           </p>
-          <p className="mb-4">
-            It's a problem <em>now</em>. A problem why diseases like tuberculosis and staph infections are getting harder (and scarier) to treat.
-          </p>
-          <p className="mb-4">
-            And this tech? It's like handing doctors a cheat code-<em>an upgrade</em> in how we understand and treat disease.
-          </p>
+          <p className="mb-4">A small insight, COVID is an airborne disease.</p>
 
-          <h2 className="text-xl font-semibold mt-8 mb-2">What Happened?</h2>
+          <h2 className="text-xl font-semibold mt-8 mb-2">What happened?</h2>
           <p className="mb-4">
-            Tulane University Scientists have made a new Group Association Model (GAM)-basically, a super smart AI that can find patterns across a large set of data that can find resistance to antibiotics in bacteria.
+            Scientists at the University of Chicago created a small, portable device (just four by eight inches across) nicknamed ABLE. (Airborne Biomarker Localisation Engine.) The scientists envision that this device could detect airborne particles in hospitals and public places.
           </p>
           <p className="mb-4">
-            Think of GAM like that one friend who can spot drama from a mile away: it sees tiny clues in the DNA (mutations) and figures out if bacteria are about to cause trouble (resist drugs-which you should always do!)
+            Wait up, what do airborne particles have to do with diseases??
           </p>
           <p className="mb-4">
-            Wait, wait, but what even is antibiotic resistance?
+            Here’s a quick summary: When you breathe, there is a possibility that there are harmful pathogens in the air surrounding you. (Oh, that’s pretty scary!) If these particles are inhaled, they are reintroduced into the air (possibly with a mutation) when someone coughs or sneezes, making it difficult to control the spread of disease.
           </p>
-          <p className="mb-4">
-            Well, here's a quick crash course: In the past, people could take antibiotics to treat diseases like tuberculosis (TB) and staph. Now they can't. Why? Over time, these bacteria have developed resistance to the drugs. How?
-          </p>
-          <p className="mb-4">
-            Antibiotics kill most bacteria, but some survive due to mutations in their DNA (now this is the problem). These resistant bacteria then reproduce, creating more bacteria that the antibiotic can't kill. (Big Yikes!)
-          </p>
-          <p className="mb-4">
-            This means the antibiotics that used to work no longer do, making it much harder to treat these diseases.
-          </p>
+          <p className="mb-4">This is why COVID spread like wildfire in a forest.</p>
 
-          <h2 className="text-xl font-semibold mt-8 mb-2">How Does It Work?</h2>
+          <h2 className="text-xl font-semibold mt-8 mb-2">How does it work?</h2>
+          <p className="mb-4">How can a device possibly detect such minute particles that we can’t even see!?</p>
           <p className="mb-4">
-            Okay, imagine training a dog to do tricks. The New Group Association Model (GAM) uses machine learning-a branch of AI where a model is trained on a large set of data to perform a task without being programmed step by step. Think of it as the training part of training the dog.
+            It is challenging to detect the desired floating particles as they may be as few as one in a trillion. Till now, it required expensive equipment to do so, but this machine changes that.
           </p>
-          <p className="mb-4">
-            GAM uses machine learning to find genetic mutations linked to drug resistance (you know, the same kind of mutations I mentioned earlier, the ones that let some bacteria survive antibiotics.)
-          </p>
-          <p className="mb-4">
-            Current tools are basic, they look at known mutations and try to find the same mutation in the bacteria. This leads to errors, because they freak over harmless mutations believing they're the reason for antibiotics' resistance, just because they look similar to known ones.
-          </p>
-          <p className="mb-4">
-            GAM is way smarter. It looks through a large set of data (DNA) from different bacterias, and whether they are resistant to the antibiotic or not. It finds the pattern in which the mutations occur. GAM then compares bacteria with different resistance patterns to find genetic changes that show resistance to specific drugs.
-          </p>
+          <p className="mb-4">Let's see how, The device turns the air into liquid. No, but how?</p>
+          <p className="mb-4">Here’s the process-</p>
+          <p className="mb-4">1. Air sampling ABLE draws in air from the surrounding environment.</p>
+          <p className="mb-4">2. Condensation It introduces water vapour and cools the air to turn it into a liquid state on a specifically designed surface.</p>
+          <p className="mb-4">3. Concentration The condensation process above concentrates any airborne biomarkers (indicators of biological substances) into the droplets. (Basically gathering all the necessary particles and turning them into droplets)</p>
+          <p className="mb-4">4. Detection The concentrated droplets are directed into a reservoir, where they can be tested using various detection methods.</p>
 
           <h2 className="text-xl font-semibold mt-8 mb-2">Why does it matter?</h2>
-          <p className="mb-4">
-            Well, because people die due to this, and the numbers are just UGLY. In 2021, 450,000 people developed multidrug-resistant tuberculosis, and treatment success rates dropped to JUST 57%.
-          </p>
-          <p className="mb-4">
-            Right now, other methods are slow, inaccurate, and miss rare mutations. While this treatment is proven to outperform WHO's current resistance detection.
-          </p>
-          <p className="mb-4">
-            And this tech? It helps doctors find the correct treatment before it's too late, it helps doctors save lives.
-          </p>
-          <p className="mb-4">
-            If you want to read more, check out Researchers use AI to improve diagnosis of drug-resistant infections | ScienceDaily
-          </p>
+          <p className="mb-4">There are numerous potential applications for ABLE.</p>
+          <p className="mb-4">For example, neonatal care. Premature infants (Infants that were born before the required time) are very fragile and vulnerable. Using methods, such as blood sampling to diagnose them, can be harmful. ABLE can be used to track newly identified biomarkers and optimize care for these infants, preventing those invasive methods.</p>
+          <p className="mb-4">The device can also be used for people with diabetes. They can check their glucose levels just from their breath!</p>
+          <p className="mb-4">And lastly, the scientists who made the disease are also collaborating with a doctor who treats inflammatory bowel disease. It may be possible to detect markers of inflammation from the breath of patients!</p>
+          <p className="mb-4">If the device had existed before COVID, its detection would have been much easier, and it might not have spread as much.</p>
+          <p className="mb-4">However, there is a small issue. The ability to easily detect airborne molecules is new. Scientists don't know what molecules they would need to look for yet!! In the future, scientists could modify the device further and upgrade it to solve the current issues.</p>
+          <p className="mb-4">If you want to know more about the device, check out Scientists invent breakthrough device to detect airborne signs of disease on Science Daily</p>
 
           <h2 className="text-xl font-semibold mt-8 mb-2">Sources:</h2>
           <ul className="list-disc ml-6 mb-4">
             <li>
-              Tulane University. “Researchers Use AI to Improve Diagnosis of Drug-Resistant Infections." <em>Science Daily</em>, Apr. 2025,{" "}
-              <a href="https://www.sciencedaily.com/releases/2025/04/250407173027.htm" target="_blank" rel="noopener noreferrer">
-                https://www.sciencedaily.com/releases/2025/04/250407173027.htm
-              </a>.
+              University of Chicago. "Scientists invent breakthrough device to detect airborne signs of disease." <em>ScienceDaily</em>, 21 May 2025.{" "}
+              <a
+                href="https://www.sciencedaily.com/releases/2025/05/250521124758.htm"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                https://www.sciencedaily.com/releases/2025/05/250521124758.htm
+              </a>
             </li>
             <li>
-              Saliba, Julian G., et al. “Enhanced Diagnosis of Multi-Drug-Resistant Microbes Using Group Association Modeling and Machine Learning.” <em>Nature Communications</em>, vol. 16, no. 1, 2025, p. 2933, doi:10.1038/s41467-025-58214-6.
+              Jingcheng Ma, Megan Laune, Pengju Li, Jing Lu, Jiping Yue, Yueyue Yu, Yamin Mansur, Amio P. D. Ritwik, Sai P. Peri, Jessica Cleary, Kaitlyn Oliphant, Zachary Kessler, Erika C. Claud, Bozhi Tian. Airborne biomarker localisation engine for open-air point-of-care detection. <em>Nature Chemical Engineering</em>, 2025, 2 (5): 321 DOI: 10.1038/s44286-025-00223-9
             </li>
           </ul>
         </article>

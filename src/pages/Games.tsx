@@ -229,6 +229,63 @@ const quizzes = [
         correctAnswer: "Yes, it occurs naturally when traveling at near light speeds"
       }
     ]
+  },
+  {
+    id: "able-device-breakthrough",
+    title: "ABLE Device: A Breakthrough in Disease Detection",
+    description: "Quiz based on the article by Taksh Jain.",
+    questions: [
+      {
+        question: "What is the ABLE device designed to do?",
+        options: [
+          "Detect airborne molecules and help with disease detection",
+          "Charge mobile phones quickly",
+          "Replace ventilators for patients",
+          "Measure oxygen levels in water"
+        ],
+        correctAnswer: "Detect airborne molecules and help with disease detection"
+      },
+      {
+        question: "Why is ABLE significant for neonatal care?",
+        options: [
+          "It can track disease markers through breathing, making diagnosis less invasive",
+          "It replaces vaccinations",
+          "It allows premature infants to walk earlier",
+          "It provides a better environment for delivery"
+        ],
+        correctAnswer: "It can track disease markers through breathing, making diagnosis less invasive"
+      },
+      {
+        question: "Why are airborne particles important for disease detection?",
+        options: [
+          "They carry harmful pathogens that can be introduced through breathing and spreading",
+          "They can only carry pollen",
+          "They are too rare to be detected",
+          "They only matter for allergies"
+        ],
+        correctAnswer: "They carry harmful pathogens that can be introduced through breathing and spreading"
+      },
+      {
+        question: "What is the first step in ABLE's detection process?",
+        options: [
+          "Air sampling to draw in air from the environment",
+          "Heating air to boil it",
+          "Directly inserting a sensor into the bloodstream",
+          "Measuring sound vibrations"
+        ],
+        correctAnswer: "Air sampling to draw in air from the environment"
+      },
+      {
+        question: "Why is the ABLE device considered a breakthrough for disease detection?",
+        options: [
+          "It allows for early and less invasive disease detection using breath",
+          "It is only useful for treating rare conditions",
+          "It replaces the need for medical staff",
+          "It operates exclusively in space environments"
+        ],
+        correctAnswer: "It allows for early and less invasive disease detection using breath"
+      }
+    ]
   }
 ];
 

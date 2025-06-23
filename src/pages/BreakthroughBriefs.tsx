@@ -189,8 +189,72 @@ const articles = [
       }
     ]
   },
+  {
+    id: 4,
+    title: "The Future of Healthcare Is in Your Breath — Literally",
+    author: "By Taksh Jain",
+    sections: [
+      {
+        heading: "Introduction",
+        content: [
+          "Waiting to give a blood sample at the doctor’s office, you’ve probably wished there were a needle-free way to get the same info.",
+          "Well, here we go,",
+          "University of Chicago introduces a game-changer! - A group of scientists created a portable device that can collect and detect airborne molecules. This device holds the potential to revolutionise the way diseases are detected and treated.",
+          "A small insight, COVID is an airborne disease."
+        ]
+      },
+      {
+        heading: "What happened?",
+        content: [
+          "Scientists at the University of Chicago created a small, portable device (just four by eight inches across) nicknamed ABLE. (Airborne Biomarker Localisation Engine.) The scientists envision that this device could detect airborne particles in hospitals and public places.",
+          "Wait up, what do airborne particles have to do with diseases??",
+          "Here’s a quick summary,",
+          "When you breathe, there is a possibility that there are harmful pathogens in the air surrounding you. (Oh, that’s pretty scary!) If these particles are inhaled, they are reintroduced into the air (possibly with a mutation) when someone coughs or sneezes, making it difficult to control the spread of disease.",
+          "This is why COVID spread like wildfire in a forest."
+        ]
+      },
+      {
+        heading: "How does it work?",
+        content: [
+          "How can a device possibly detect such minute particles that we can’t even see!?",
+          "It is challenging to detect the desired floating particles as they may be as few as one in a trillion. Till now, it required expensive equipment to do so, but this machine changes that.",
+          "Let's see how,",
+          "The device turns the air into liquid.",
+          "No, but how?",
+          "Here’s the process-",
+          "1. Air sampling ABLE draws in air from the surrounding environment.",
+          "2. Condensation It introduces water vapour and cools the air to turn it into a liquid state on a specifically designed surface.",
+          "3. Concentration The condensation process above concentrates any airborne biomarkers (indicators of biological substances) into the droplets. (Basically gathering all the necessary particles and turning them into droplets)",
+          "4. Detection The concentrated droplets are directed into a reservoir, where they can be tested using various detection methods."
+        ]
+      },
+      {
+        heading: "Why does it matter?",
+        content: [
+          "There are numerous potential applications for ABLE.",
+          "For example, neonatal care. Premature infants (Infants that were born before the required time) are very fragile and vulnerable. Using methods, such as blood sampling to diagnose them, can be harmful. ABLE can be used to track newly identified biomarkers and optimize care for these infants, preventing those invasive methods.",
+          "The device can also be used for people with diabetes. They can check their glucose levels just from their breath!",
+          "And lastly, the scientists who made the device are also collaborating with a doctor who treats inflammatory bowel disease. It may be possible to detect markers of inflammation from the breath of patients!",
+          "If the device had existed before COVID, its detection would have been much easier, and it might not have spread as much.",
+          "However, there is a small issue.",
+          "The ability to easily detect airborne molecules is new. Scientists don't know what molecules they would need to look for yet!! In the future, scientists could modify the device further and upgrade it to solve the current issues.",
+          "If you want to know more about the device, check out Scientists invent breakthrough device to detect airborne signs of disease on Science Daily."
+        ]
+      }
+    ],
+    sources: [
+      {
+        text: "University of Chicago. \"Scientists invent breakthrough device to detect airborne signs of disease.\" ScienceDaily, 21 May 2025.",
+        url: "https://www.sciencedaily.com/releases/2025/05/250521124758.htm"
+      },
+      {
+        text: "Journal Reference: Jingcheng Ma, Megan Laune, Pengju Li, Jing Lu, Jiping Yue, Yueyue Yu, Yamin Mansur, Amio P. D. Ritwik, Sai P. Peri, Jessica Cleary, Kaitlyn Oliphant, Zachary Kessler, Erika C. Claud, Bozhi Tian. Airborne biomarker localisation engine for open-air point-of-care detection. Nature Chemical Engineering, 2025, 2 (5): 321 DOI: 10.1038/s44286-025-00223-9",
+        url: "http://dx.doi.org/10.1038/s44286-025-00223-9"
+      }
+    ]
+  },
   // {
-  //   id: 4,
+  //   id: 5,
   //   title: "Tiny Bugs, Infinite Potential",
   //   author: "By Sandra Myat (Team Thiland)",
   //   sections: [
@@ -288,7 +352,7 @@ const BreakthroughBriefs = () => {
         </p>
 
         {/* 🔍 Search Input (top-right) */}
-        <div className="absolute top-10 right-4 md:right-10">
+        <div className="absolute top-10 right-4 md:right-10 border-2 border-blue-300 rounded-lg">
           <Input
             type="text"
             placeholder="Search articles..."
