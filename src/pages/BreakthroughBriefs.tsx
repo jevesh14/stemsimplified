@@ -256,7 +256,7 @@ const articles = [
   {
     id: 5,
     title: "Tiny Bugs, Infinite Potential",
-    author: "By Sandra Myat (Team Thiland)",
+    author: "By Sandra Myat (Team Thailand)",
     sections: [
       {
         heading: "Introduction",
