@@ -253,65 +253,65 @@ const articles = [
       }
     ]
   },
-  // {
-  //   id: 5,
-  //   title: "Tiny Bugs, Infinite Potential",
-  //   author: "By Sandra Myat (Team Thiland)",
-  //   sections: [
-  //     {
-  //       heading: "Introduction",
-  //       content: [
-  //         "Let’s take a moment to appreciate how our noses aren’t clogged and our throats aren't hurting because, honestly, being sick is the worst and on par with hospital visits. But what if we're able to avoid those long hospital stays, painful treatments, and harsh side effects? What if instead a tiny robot could zoom through your veins and solve your problem? I know what you're thinking: \"A robot…inside my body?” Yes, but don't worry, it won't ask for your Apple Pay details or steal your Netflix password.",
-  //         "The concept of micro- and nanobots is not particularly new, as scientists have been developing it over the past two decades. These tiny robots can travel through your body to deliver medicine directly to the targeted source. This innovation can improve the risks and suffering experienced by a majority of terminally ill patients. Could this overall replace the need for surgery and chemotherapy?"
-  //       ]
-  //     },
-  //     {
-  //       heading: "What Happened?",
-  //       content: [
-  //         "Hey, why don't microbots ever gossip?",
-  //         "Probably because theyre too small to spread rumors",
-  //         "How do they work?",
-  //         "The microbots developed are engineered to navigate through the fluids inside our bodies and target medicine to specifically sick cells.",
-  //         "Think of them as delivery drivers, just like ordering food on Grab or packages through FedEx, but for your body instead. The shape of the robots is similar to the likes of a single red blood cell, as they are swift, tiny, and immediate. Researchers have clinically tested them on animals such as mice, which turned out successful in the end. If they can help mice heal, who’s to say we aren't next?"
-  //       ]
-  //     },
-  //     {
-  //       heading: "How Does It Work",
-  //       content: [
-  //         "What did the magnetic microbot say to the doctor?",
-  //         "“I’m attracted to healing”.",
-  //         "Now, Picture a small sail or boat that's essentially stretchy and made out of flexible/elastic materials that flow through your blood; that's essentially the microbot. Now, how do they work and function? These microbots can be produced from either magnets or chemical reactions. Ever tried plopping vinegar and soda or Coke and Mentos together? The same bubbling reaction is used for the bots to travel through your body.",
-  //         "For the magnetic-powered microbots, scientists essentially use magnetic fields to direct them to the problem, whether it be a tumor, cancerous cells, or an infection. Once they reach the destination, the microbots release the medical substance directly to the area."
-  //       ]
-  //     },
-  //     {
-  //       heading: "Why does it matter?",
-  //       content: [
-  //         "Most of the time the medicine put into our body is similar to tossing a message in a bottle into the ocean, hoping it reaches the shore. They might eventually reach the problem, but at what cost? These microbots are able to help patients and save them from their pains without suffering. In the cases of heart disease, cancer, and brain disorders, these microbots can travel through barriers in the blood-brain, arteries, and bloodstreams to precisely and accurately deliver medicine to the root of the problem. This helps the patients, as many treatments target the full body, which causes many side effects compared to the microbots going to the area only where the problem is."
-  //       ]
-  //     },
-  //     {
-  //       heading: "Conclusion",
-  //       content: [
-  //         "Although most people expect inventions such as flying cars, I’d say microbots aren’t as bad either, as researchers continue to improve and experiment with the precision and accuracy of these bots. With the current technologies and innovations, it’s not that far to dream of surgeries becoming less frequent, as one day many illnesses may simply be solved with the digestion of a simple pill. If you had a chance, would you consider trusting a microbot to heal you from the inside?"
-  //       ]
-  //     }
-  //   ],
-  //   sources: [
-  //     {
-  //       text: "Corder, Greg. “Tiny Robots Target Tumors with Precision Drug Delivery.” Medical Xpress, 19 Apr. 2024",
-  //       url: "https://medicalxpress.com/news/2024-04-tiny-robots-tumors-precision-drug.html"
-  //     },
-  //     {
-  //       text: "California Institute of Technology. “Microrobots Deliver Drugs Precisely Where Needed.” ScienceDaily, 19 Apr. 2024",
-  //       url: "https://www.sciencedaily.com/releases/2024/04/240419112245.htm"
-  //     },
-  //     {
-  //       text: "University of Hawaiʻi at Mānoa. “Tiny Robots Could Deliver Drugs in the Human Body.” University of Hawaiʻi News, 20 Mar. 2024",
-  //       url: "https://www.hawaii.edu/news/2024/03/20/tiny-robots-drug-delivery/"
-  //     }
-  //   ]
-  // },
+  {
+    id: 5,
+    title: "Tiny Bugs, Infinite Potential",
+    author: "By Sandra Myat (Team Thiland)",
+    sections: [
+      {
+        heading: "Introduction",
+        content: [
+          "Let’s take a moment to appreciate how our noses aren’t clogged and our throats aren't hurting because, honestly, being sick is the worst and on par with hospital visits. But what if we're able to avoid those long hospital stays, painful treatments, and harsh side effects? What if instead a tiny robot could zoom through your veins and solve your problem? I know what you're thinking: \"A robot…inside my body?” Yes, but don't worry, it won't ask for your Apple Pay details or steal your Netflix password.",
+          "The concept of micro- and nanobots is not particularly new, as scientists have been developing it over the past two decades. These tiny robots can travel through your body to deliver medicine directly to the targeted source. This innovation can improve the risks and suffering experienced by a majority of terminally ill patients. Could this overall replace the need for surgery and chemotherapy?"
+        ]
+      },
+      {
+        heading: "What Happened?",
+        content: [
+          "Hey, why don't microbots ever gossip?",
+          "Probably because theyre too small to spread rumors",
+          "How do they work?",
+          "The microbots developed are engineered to navigate through the fluids inside our bodies and target medicine to specifically sick cells.",
+          "Think of them as delivery drivers, just like ordering food on Grab or packages through FedEx, but for your body instead. The shape of the robots is similar to the likes of a single red blood cell, as they are swift, tiny, and immediate. Researchers have clinically tested them on animals such as mice, which turned out successful in the end. If they can help mice heal, who’s to say we aren't next?"
+        ]
+      },
+      {
+        heading: "How Does It Work",
+        content: [
+          "What did the magnetic microbot say to the doctor?",
+          "“I’m attracted to healing”.",
+          "Now, Picture a small sail or boat that's essentially stretchy and made out of flexible/elastic materials that flow through your blood; that's essentially the microbot. Now, how do they work and function? These microbots can be produced from either magnets or chemical reactions. Ever tried plopping vinegar and soda or Coke and Mentos together? The same bubbling reaction is used for the bots to travel through your body.",
+          "For the magnetic-powered microbots, scientists essentially use magnetic fields to direct them to the problem, whether it be a tumor, cancerous cells, or an infection. Once they reach the destination, the microbots release the medical substance directly to the area."
+        ]
+      },
+      {
+        heading: "Why does it matter?",
+        content: [
+          "Most of the time the medicine put into our body is similar to tossing a message in a bottle into the ocean, hoping it reaches the shore. They might eventually reach the problem, but at what cost? These microbots are able to help patients and save them from their pains without suffering. In the cases of heart disease, cancer, and brain disorders, these microbots can travel through barriers in the blood-brain, arteries, and bloodstreams to precisely and accurately deliver medicine to the root of the problem. This helps the patients, as many treatments target the full body, which causes many side effects compared to the microbots going to the area only where the problem is."
+        ]
+      },
+      {
+        heading: "Conclusion",
+        content: [
+          "Although most people expect inventions such as flying cars, I’d say microbots aren’t as bad either, as researchers continue to improve and experiment with the precision and accuracy of these bots. With the current technologies and innovations, it’s not that far to dream of surgeries becoming less frequent, as one day many illnesses may simply be solved with the digestion of a simple pill. If you had a chance, would you consider trusting a microbot to heal you from the inside?"
+        ]
+      }
+    ],
+    sources: [
+      {
+        "text": "Aliakbarzadeh, Sanaz, et al. “Micro‑Surgeons and Nano‑Pharmacists: The Future of Healthcare with Medical Nanorobots.” Journal of Drug Delivery Science and Technology, vol. 103, no. 106410, 2025, p. 106410",
+        "url": "https://doi.org/10.1016/j.jddst.2024.106410"
+      },
+      {
+        "text": "Sun, Tianhao, et al. “Application of Micro/Nanorobot in Medicine.” Frontiers in Bioengineering and Biotechnology, vol. 12, 2024, p. 1347312",
+        "url": "https://doi.org/10.3389/fbioe.2024.1347312"
+      },
+      {
+        "text": "Ye, Min, et al. “Magnetic Microrobots with Folate Targeting for Drug Delivery.” Cyborg and Bionic Systems, vol. 4, 2023, p. 0019",
+        "url": "https://doi.org/10.34133/cbsystems.0019"
+      }
+    ]    
+  },
 ];
 
 const BreakthroughBriefs = () => {
