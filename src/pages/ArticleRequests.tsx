@@ -38,7 +38,7 @@ const ArticleRequests = () => {
       <Navbar />
       <div className="container mx-auto px-4 py-10">
         <h1 className="text-3xl md:text-4xl font-bold text-blue-900 mb-8">
-          Request an Article
+          Request An Article
         </h1>
         <p className="text-gray-600 mb-8">
           Is there a STEM topic you'd like us to explain? Submit your request below.
