@@ -287,6 +287,63 @@ const quizzes = [
       }
     ]
   }
+  // {
+  //   id: "tiny-bugs-infinite-potential",
+  //   title: "Tiny Bugs, Infinite Potential",
+  //   description: "Quiz based on the article by Sandra Myat (Team Thailand).",
+  //   questions: [
+  //     {
+  //       question: "What is the main function of microbots as described in the article?",
+  //       options: [
+  //         "To remove clots from arteries",
+  //         "To deliver medicine directly to targeted areas inside the body",
+  //         "To enhance memory through electrical pulses",
+  //         "To record brain activity for doctors"
+  //       ],
+  //       correctAnswer: "To deliver medicine directly to targeted areas inside the body"
+  //     },
+  //     {
+  //       question: "What powers the movement of some microbots?",
+  //       options: [
+  //         "Sunlight and wind",
+  //         "Friction from red blood cells",
+  //         "Magnetic fields and chemical reactions",
+  //         "Electric pulses from neurons"
+  //       ],
+  //       correctAnswer: "Magnetic fields and chemical reactions"
+  //     },
+  //     {
+  //       question: "Why are microbots compared to delivery drivers in the article?",
+  //       options: [
+  //         "Because they come in different vehicle shapes",
+  //         "Because they travel fast and sometimes get lost",
+  //         "Because they transport medicine directly to the problem area",
+  //         "Because they use GPS to move inside the body"
+  //       ],
+  //       correctAnswer: "Because they transport medicine directly to the problem area"
+  //     },
+  //     {
+  //       question: "What major benefit do microbots offer compared to traditional treatments like chemotherapy?",
+  //       options: [
+  //         "They are less expensive",
+  //         "They boost immunity permanently",
+  //         "They only target the problem area, reducing side effects",
+  //         "They eliminate the need for doctors"
+  //       ],
+  //       correctAnswer: "They only target the problem area, reducing side effects"
+  //     },
+  //     {
+  //       question: "According to the article, how are microbots shaped?",
+  //       options: [
+  //         "Like a red blood cell to move easily through the bloodstream",
+  //         "Like a camera to record internal images",
+  //         "Like a needle to inject medicine",
+  //         "Like a white blood cell to fight infections"
+  //       ],
+  //       correctAnswer: "Like a red blood cell to move easily through the bloodstream"
+  //     }
+  //   ]
+  // }, 
 ];
 
 const Games = () => {
