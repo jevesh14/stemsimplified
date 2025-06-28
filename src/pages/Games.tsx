@@ -4,6 +4,7 @@ import { Gamepad } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
+import Footer from "@/components/Footer";
 
 // Multi-quiz data structure
 const quizzes = [
@@ -396,150 +397,153 @@ const Games = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
+    <div className="min-h-screen flex flex-col bg-gradient-to-b from-blue-50 to-white">
       <Navbar />
-      <div className="container mx-auto px-4 py-10">
-        <h1 className="text-3xl md:text-4xl font-bold text-blue-900 mb-8">Games & Fun</h1>
-        <p className="text-gray-600 mb-8">
-          Interactive games and activities to make learning STEM fun.
-        </p>
+      <div className="flex-1 h-full flex flex-col">
+        <div className="container mx-auto px-4 py-10 relative flex-1 flex flex-col h-full">
+          <h1 className="text-3xl md:text-4xl font-bold text-blue-900 mb-8">Games & Fun</h1>
+          <p className="text-gray-600 mb-8">
+            Interactive games and activities to make learning STEM fun.
+          </p>
 
-        <div className="flex flex-col items-center max-w-2xl mx-auto">
-          <Card className="w-full transition-all hover:shadow-lg mb-8">
-            <CardHeader>
-              <div className="flex items-center gap-3">
-                <Gamepad className="h-6 w-6 text-blue-600" />
-                <CardTitle>STEM Article Quizzes</CardTitle>
-              </div>
-              <CardDescription>
-                Select an article and test your knowledge!
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              {!showQuiz ? (
-                <div>
-                  <p className="text-gray-600 mb-4 text-center">
-                    Choose an article below to start its quiz.
-                  </p>
-                  <div className="flex justify-center mb-4">
-                    <select
-                      className="rounded-lg border border-blue-300 px-4 py-2 text-lg font-semibold bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400 transition w-full max-w-xl text-blue-900"
-                      value={selectedQuizId || ""}
-                      onChange={e => setSelectedQuizId(e.target.value)}
-                    >
-                      <option value="" disabled>
-                        -- Select an Article --
-                      </option>
-                      {quizzes.map((quiz) => (
-                        <option key={quiz.id} value={quiz.id}>
-                          {quiz.title} 
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-                  {selectedQuiz && (
-                    <div className="text-center text-gray-500 text-sm mb-2">
-                      {selectedQuiz.description}
-                    </div>
-                  )}
-                  <Button
-                    className="w-full bg-blue-600 hover:bg-blue-700 mt-2"
-                    onClick={handleStartQuiz}
-                    disabled={!selectedQuizId}
-                  >
-                    Start Quiz
-                  </Button>
+          <div className="flex flex-col items-center max-w-2xl mx-auto">
+            <Card className="w-full transition-all hover:shadow-lg mb-8">
+              <CardHeader>
+                <div className="flex items-center gap-3">
+                  <Gamepad className="h-6 w-6 text-blue-600" />
+                  <CardTitle>STEM Article Quizzes</CardTitle>
                 </div>
-              ) : !completed ? (
-                <div className="space-y-6">
-                  <div className="p-4 bg-blue-50 rounded-lg">
-                    <h3 className="font-medium text-lg mb-3">
-                      Question {currentQuestion + 1} of {quizQuestions.length}
-                    </h3>
-                    <p className="text-blue-800 font-medium mb-4">
-                      {quizQuestions[currentQuestion].question}
+                <CardDescription>
+                  Select an article and test your knowledge!
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                {!showQuiz ? (
+                  <div>
+                    <p className="text-gray-600 mb-4 text-center">
+                      Choose an article below to start its quiz.
                     </p>
-                    <div className="space-y-3">
-                      {quizQuestions[currentQuestion].options.map((option, index) => (
-                        <div
-                          key={index}
-                          className={`flex items-center space-x-3 p-3 rounded-md border ${
-                            selectedAnswer === option ? "bg-blue-200" : "border-blue-200"
-                          } hover:bg-blue-100 cursor-pointer`}
-                          onClick={() => setSelectedAnswer(option)}
-                        >
-                          <Checkbox
-                            id={`option-${index}`}
-                            checked={selectedAnswer === option}
-                          />
-                          <label htmlFor={`option-${index}`} className="cursor-pointer flex-grow">
-                            {option}
-                          </label>
-                        </div>
-                      ))}
+                    <div className="flex justify-center mb-4">
+                      <select
+                        className="rounded-lg border border-blue-300 px-4 py-2 text-lg font-semibold bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400 transition w-full max-w-xl text-blue-900"
+                        value={selectedQuizId || ""}
+                        onChange={e => setSelectedQuizId(e.target.value)}
+                      >
+                        <option value="" disabled>
+                          -- Select an Article --
+                        </option>
+                        {quizzes.map((quiz) => (
+                          <option key={quiz.id} value={quiz.id}>
+                            {quiz.title} 
+                          </option>
+                        ))}
+                      </select>
                     </div>
-                    {selectedAnswer && (
-                      <div className="text-right mt-4">
-                        <Button
-                          className="bg-blue-600 hover:bg-blue-700"
-                          onClick={handleNext}
-                        >
-                          {currentQuestion === quizQuestions.length - 1 ? "Finish" : "Next"}
-                        </Button>
+                    {selectedQuiz && (
+                      <div className="text-center text-gray-500 text-sm mb-2">
+                        {selectedQuiz.description}
+                      </div>
+                    )}
+                    <Button
+                      className="w-full bg-blue-600 hover:bg-blue-700 mt-2"
+                      onClick={handleStartQuiz}
+                      disabled={!selectedQuizId}
+                    >
+                      Start Quiz
+                    </Button>
+                  </div>
+                ) : !completed ? (
+                  <div className="space-y-6">
+                    <div className="p-4 bg-blue-50 rounded-lg">
+                      <h3 className="font-medium text-lg mb-3">
+                        Question {currentQuestion + 1} of {quizQuestions.length}
+                      </h3>
+                      <p className="text-blue-800 font-medium mb-4">
+                        {quizQuestions[currentQuestion].question}
+                      </p>
+                      <div className="space-y-3">
+                        {quizQuestions[currentQuestion].options.map((option, index) => (
+                          <div
+                            key={index}
+                            className={`flex items-center space-x-3 p-3 rounded-md border ${
+                              selectedAnswer === option ? "bg-blue-200" : "border-blue-200"
+                            } hover:bg-blue-100 cursor-pointer`}
+                            onClick={() => setSelectedAnswer(option)}
+                          >
+                            <Checkbox
+                              id={`option-${index}`}
+                              checked={selectedAnswer === option}
+                            />
+                            <label htmlFor={`option-${index}`} className="cursor-pointer flex-grow">
+                              {option}
+                            </label>
+                          </div>
+                        ))}
+                      </div>
+                      {selectedAnswer && (
+                        <div className="text-right mt-4">
+                          <Button
+                            className="bg-blue-600 hover:bg-blue-700"
+                            onClick={handleNext}
+                          >
+                            {currentQuestion === quizQuestions.length - 1 ? "Finish" : "Next"}
+                          </Button>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                ) : (
+                  <div className="text-center p-4 bg-blue-50 rounded-lg">
+                    <h3 className="font-bold text-xl mb-2">Quiz Complete!</h3>
+                    <p className="text-lg mb-3">
+                      Your score: <span className="font-bold text-blue-700">{score}/{quizQuestions.length}</span>
+                    </p>
+                    <p className="text-gray-600">
+                      {score === quizQuestions.length
+                        ? "Perfect score! You're a STEM expert!"
+                        : score >= quizQuestions.length / 2
+                          ? "Great job! Keep learning!"
+                          : "Keep practicing to improve your score!"}
+                    </p>
+                    {quizQuestions.length > 0 && userAnswers.length === quizQuestions.length && (
+                      <div className="mt-8">
+                        <h4 className="font-semibold text-lg mb-4 text-blue-800">Review Your Answers</h4>
+                        {quizQuestions.map((q, idx) => {
+                          const userAnswer = userAnswers[idx];
+                          const isCorrect = userAnswer === q.correctAnswer;
+                          if (isCorrect) return null;
+                          return (
+                            <div key={idx} className="mb-4 p-4 bg-red-50 border-l-4 border-red-400 rounded shadow-sm text-left">
+                              <div className="font-medium text-blue-900 mb-2">Q{idx + 1}: {q.question}</div>
+                              <div className="mb-1"><span className="font-semibold text-red-700">Your Answer:</span> <span className="text-red-700">{userAnswer || <span className='italic text-gray-400'>No answer</span>}</span></div>
+                              <div><span className="font-semibold text-green-700">Correct Answer:</span> <span className="text-green-700">{q.correctAnswer}</span></div>
+                            </div>
+                          );
+                        })}
                       </div>
                     )}
                   </div>
-                </div>
-              ) : (
-                <div className="text-center p-4 bg-blue-50 rounded-lg">
-                  <h3 className="font-bold text-xl mb-2">Quiz Complete!</h3>
-                  <p className="text-lg mb-3">
-                    Your score: <span className="font-bold text-blue-700">{score}/{quizQuestions.length}</span>
+                )}
+              </CardContent>
+              <CardFooter>
+                {showQuiz ? (
+                  <Button
+                    className="w-full bg-blue-600 hover:bg-blue-700"
+                    onClick={handleReset}
+                  >
+                    {completed ? "Try Another Quiz" : "Quit Quiz"}
+                  </Button>
+                ) : (
+                  <p className="text-sm text-gray-500 text-center">
+                    Select an article and start the quiz!
                   </p>
-                  <p className="text-gray-600">
-                    {score === quizQuestions.length
-                      ? "Perfect score! You're a STEM expert!"
-                      : score >= quizQuestions.length / 2
-                        ? "Great job! Keep learning!"
-                        : "Keep practicing to improve your score!"}
-                  </p>
-                  {quizQuestions.length > 0 && userAnswers.length === quizQuestions.length && (
-                    <div className="mt-8">
-                      <h4 className="font-semibold text-lg mb-4 text-blue-800">Review Your Answers</h4>
-                      {quizQuestions.map((q, idx) => {
-                        const userAnswer = userAnswers[idx];
-                        const isCorrect = userAnswer === q.correctAnswer;
-                        if (isCorrect) return null;
-                        return (
-                          <div key={idx} className="mb-4 p-4 bg-red-50 border-l-4 border-red-400 rounded shadow-sm text-left">
-                            <div className="font-medium text-blue-900 mb-2">Q{idx + 1}: {q.question}</div>
-                            <div className="mb-1"><span className="font-semibold text-red-700">Your Answer:</span> <span className="text-red-700">{userAnswer || <span className='italic text-gray-400'>No answer</span>}</span></div>
-                            <div><span className="font-semibold text-green-700">Correct Answer:</span> <span className="text-green-700">{q.correctAnswer}</span></div>
-                          </div>
-                        );
-                      })}
-                    </div>
-                  )}
-                </div>
-              )}
-            </CardContent>
-            <CardFooter>
-              {showQuiz ? (
-                <Button
-                  className="w-full bg-blue-600 hover:bg-blue-700"
-                  onClick={handleReset}
-                >
-                  {completed ? "Try Another Quiz" : "Quit Quiz"}
-                </Button>
-              ) : (
-                <p className="text-sm text-gray-500 text-center">
-                  Select an article and start the quiz!
-                </p>
-              )}
-            </CardFooter>
-          </Card>
+                )}
+              </CardFooter>
+            </Card>
+          </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import ReactMarkdown from "react-markdown";
+import Footer from "@/components/Footer";
 
 const articles = [
   {
@@ -148,6 +149,7 @@ const DelveDeeper = () => {
           </article>
         ))}
       </div>
+      <Footer />
     </div>
   );
 };

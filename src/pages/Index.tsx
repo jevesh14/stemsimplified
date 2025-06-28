@@ -1,7 +1,7 @@
-
 import { Book, Gamepad, Layers } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import CategoryCard from "@/components/CategoryCard";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   const categories = [
@@ -65,13 +65,7 @@ const Index = () => {
         </div>
       </div>
       {/* Footer Section */}
-      <footer className="bg-blue-900 text-white py-6">
-        <div className="container mx-auto text-center">
-          <p className="text-sm">
-            &copy; 2025 STEM Simplified. All rights reserved.
-          </p>
-        </div>
-      </footer>
+      <Footer />
       {/* Optional: Add a scroll-to-top button */}
       <a href="#top" className="fixed bottom-4 right-4 bg-blue-600 text-white p-2 rounded-full shadow-lg hover:bg-blue-700 transition">
         ↑

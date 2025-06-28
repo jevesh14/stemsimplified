@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const RecentArticles = () => {
   return (
@@ -18,7 +19,7 @@ const RecentArticles = () => {
 
           <h2 className="text-xl font-semibold mt-8 mb-2">Introduction</h2>
           <p className="mb-4">
-            Waiting to give a blood sample at the doctor’s office, you’ve probably wished there were a needle-free way to get the same info.
+            Waiting to give a blood sample at the doctor's office, you've probably wished there were a needle-free way to get the same info.
           </p>
           <p className="mb-4">
             Well, here we go, University of Chicago introduces a game-changer! A group of scientists created a portable device that can collect and detect airborne molecules. This device holds the potential to revolutionise the way diseases are detected and treated.
@@ -33,17 +34,17 @@ const RecentArticles = () => {
             Wait up, what do airborne particles have to do with diseases??
           </p>
           <p className="mb-4">
-            Here’s a quick summary: When you breathe, there is a possibility that there are harmful pathogens in the air surrounding you. (Oh, that’s pretty scary!) If these particles are inhaled, they are reintroduced into the air (possibly with a mutation) when someone coughs or sneezes, making it difficult to control the spread of disease.
+            Here's a quick summary: When you breathe, there is a possibility that there are harmful pathogens in the air surrounding you. (Oh, that's pretty scary!) If these particles are inhaled, they are reintroduced into the air (possibly with a mutation) when someone coughs or sneezes, making it difficult to control the spread of disease.
           </p>
           <p className="mb-4">This is why COVID spread like wildfire in a forest.</p>
 
           <h2 className="text-xl font-semibold mt-8 mb-2">How does it work?</h2>
-          <p className="mb-4">How can a device possibly detect such minute particles that we can’t even see!?</p>
+          <p className="mb-4">How can a device possibly detect such minute particles that we can't even see!?</p>
           <p className="mb-4">
             It is challenging to detect the desired floating particles as they may be as few as one in a trillion. Till now, it required expensive equipment to do so, but this machine changes that.
           </p>
           <p className="mb-4">Let's see how, The device turns the air into liquid. No, but how?</p>
-          <p className="mb-4">Here’s the process-</p>
+          <p className="mb-4">Here's the process-</p>
           <p className="mb-4">1. Air sampling ABLE draws in air from the surrounding environment.</p>
           <p className="mb-4">2. Condensation It introduces water vapour and cools the air to turn it into a liquid state on a specifically designed surface.</p>
           <p className="mb-4">3. Concentration The condensation process above concentrates any airborne biomarkers (indicators of biological substances) into the droplets. (Basically gathering all the necessary particles and turning them into droplets)</p>
@@ -76,6 +77,7 @@ const RecentArticles = () => {
           </ul>
         </article>
       </div>
+      <Footer />
     </div>
   );
 };

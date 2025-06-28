@@ -1,11 +1,13 @@
 import Navbar from "@/components/Navbar";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
+import Footer from "@/components/Footer";
 
 const articles = [
   {
     id: 1,
     title: "AI: 1, Antibiotic Resistance: 0",
+    description: "An AI from Tulane University can now instantly detect antibiotic resistance in bacteria through spotting mutation patterns. This breakthrough could revolutionize how we treat infections! check out more.", 
     author: "By Lavanya Sharma",
     sections: [
       {
@@ -67,6 +69,7 @@ const articles = [
   {
     id: 2,
     title: "Pocket-Sized Physics: Turning Your Phone into an Antimatter Detector",
+    description: "Scientists just used a phone to track invisible particles . It’s called antimatter and this could help us understand why the universe even exists. Check it out by reading this article!!", 
     author: "By Paridhi Gautam",
     sections: [
       {
@@ -117,6 +120,7 @@ const articles = [
   {
     id: 3,
     title: "The Soil Factor: Soil Saturation Triggers Floods",
+    description: "Scientists expose how wet soil can supercharge floods! Even moderate storms can cause massive damage. Discover how smarter flood prediction is now possible by reading about the ground beneath the storm!",
     author: "By Aishna Goyal",
     sections: [
       {
@@ -192,6 +196,7 @@ const articles = [
   {
     id: 4,
     title: "The Future of Healthcare Is in Your Breath — Literally",
+    description: "A new device captures clues from the air around you — and it might just change how we fight disease forever. Check it out by reading this article",
     author: "By Taksh Jain",
     sections: [
       {
@@ -256,6 +261,7 @@ const articles = [
   {
     id: 5,
     title: "Tiny Bugs, Infinite Potential",
+    description: "Scientists have invented micro bots capable of delivering medicine directly inside the body-no surgery needed! This breakthrough is able to transform the medical industry on treatments for diseases like cancer and infections. Scroll to learn more!",
     author: "By Sandra Myat (Team Thailand)",
     sections: [
       {
@@ -316,7 +322,7 @@ const articles = [
 
 const BreakthroughBriefs = () => {
   const [searchQuery, setSearchQuery] = useState("");
-
+  const [expandedIds, setExpandedIds] = useState<number[]>([]);
   const matchScore = (text: string) => {
     const query = searchQuery.toLowerCase();
     const target = text.toLowerCase();
@@ -343,75 +349,134 @@ const BreakthroughBriefs = () => {
   );
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
+    <div className="min-h-screen flex flex-col bg-gradient-to-b from-blue-50 to-white">
       <Navbar />
-      <div className="container mx-auto px-4 py-10 relative">
-        <h1 className="text-3xl md:text-4xl font-bold text-blue-900 mb-4">Breakthrough Briefs</h1>
-        <p className="text-gray-600 mb-6">
-          Quick summaries of the latest STEM breakthroughs and discoveries.
-        </p>
+      <div className="flex-1 h-full flex flex-col">
+        <div className="container mx-auto px-4 py-10 relative flex-1 flex flex-col h-full">
+          <h1 className="text-3xl md:text-4xl font-bold text-blue-900 mb-4">Breakthrough Briefs</h1>
+          <p className="text-gray-600 mb-6">
+            Quick summaries of the latest STEM breakthroughs and discoveries.
+          </p>
 
-        {/* 🔍 Search Input (top-right) */}
-        <div className="absolute top-10 right-4 md:right-10 border-2 border-blue-300 rounded-lg">
-          <Input
-            type="text"
-            placeholder="Search articles..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-64"
-          />
-        </div>
+          {/* 🔍 Search Input (top-right) */}
+          <div className="absolute top-10 right-4 md:right-10 border-2 border-blue-300 rounded-lg">
+            <Input
+              type="text"
+              placeholder="Search Articles..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="w-64"
+            />
+          </div>
 
-        {/* 📰 Filtered Articles */}
-        <div className="space-y-12 mt-20">
-          {filteredArticles.length === 0 ? (
-            <p className="text-gray-500 text-center">No articles found.</p>
-          ) : (
-            filteredArticles.map((article) => (
-              <article
-                key={article.id}
-                className="bg-white bg-opacity-80 rounded-lg shadow p-8 max-w-2xl mx-auto"
-              >
-                <h2 className="text-2xl font-bold mb-2">{article.title}</h2>
-                <p className="italic mb-6">{article.author}</p>
-                {article.sections.map((section, idx) => (
-                  <div key={idx} className="mb-6">
-                    <h3 className="text-lg font-semibold mb-1">{section.heading}</h3>
-                    {section.content.map((para, i) => (
-                      <p className="mb-2" key={i}>{para}</p>
-                    ))}
-                  </div>
-                ))}
-                <div>
-                  <h4 className="font-semibold mb-1">Sources:</h4>
-                  <ul className="list-disc ml-6">
-                    {article.sources.map((src, i) => (
-                      <li key={i}>
-                        {src.url ? (
-                          <>
-                            {src.text.split('"')[0]}
-                            <a
-                              href={src.url}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-blue-600 underline"
-                            >
-                              {src.url}
-                            </a>
-                            {src.text.split('"').slice(2).join('"')}
-                          </>
-                        ) : (
-                          src.text
+          {/* 📰 Filtered Articles */}
+          <div className="space-y-6 mt-20">
+            {filteredArticles.length === 0 ? (
+              <p className="text-gray-500 text-center">No articles found.</p>
+            ) : (
+              filteredArticles.map((article) => {
+                const isExpanded = expandedIds.includes(article.id);
+                return (
+                  <article
+                    key={article.id}
+                    className={
+                      `bg-white bg-opacity-95 rounded-2xl border border-blue-200 shadow-lg max-w-4xl xl:max-w-5xl mx-auto transition-colors duration-300 ` +
+                      (isExpanded ? 'ring-2 ring-blue-400 bg-gradient-to-br from-blue-50 via-white to-blue-100' : 'hover:ring-1 hover:ring-blue-200')
+                    }
+                    style={{ boxShadow: isExpanded ? '0 12px 40px 0 rgba(34, 139, 230, 0.13)' : undefined }}
+                  >
+                    <button
+                      className={
+                        `w-full text-left focus:outline-none flex items-center justify-between px-6 md:px-8 py-5 rounded-2xl transition-colors duration-200 ` +
+                        (isExpanded ? 'bg-blue-50' : 'hover:bg-blue-50')
+                      }
+                      onClick={() => {
+                        if (isExpanded) {
+                          setExpandedIds(expandedIds.filter(id => id !== article.id));
+                        } else {
+                          setExpandedIds([...expandedIds, article.id]);
+                        }
+                      }}
+                      aria-expanded={isExpanded}
+                    >
+                      <div>
+                        <h2 className="text-xl md:text-2xl font-extrabold mb-1 text-blue-900 transition-colors duration-200">{article.title}</h2>
+                        {!isExpanded && (
+                          <p className="mb-2 text-gray-600 text-base font-normal">{article.description}</p>
                         )}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </article>
-            ))
-          )}
+                        <p className="italic text-gray-600 mb-0 text-base md:text-lg">{article.author}</p>
+                      </div>
+                      <span
+                        className={
+                          `ml-4 text-3xl transition-transform duration-300 ` +
+                          (isExpanded ? 'rotate-180 text-blue-600' : 'rotate-0 text-gray-400')
+                        }
+                        aria-hidden="true"
+                      >
+                        <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 9l6 6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                      </span>
+                    </button>
+                    <div
+                      className={
+                        `overflow-hidden transition-all duration-[1400ms] ease-in-out bg-white px-6 md:px-8 ` +
+                        (isExpanded ? 'max-h-[70vh] py-6 opacity-100 bg-blue-50' : 'max-h-0 py-0 opacity-0 bg-white')
+                      }
+                      style={{
+                        visibility: 'visible',
+                      }}
+                    >
+                      <div
+                        className={
+                          isExpanded
+                            ? 'overflow-y-auto scrollbar-thin scrollbar-thumb-blue-200 scrollbar-track-blue-50 pr-2 h-full'
+                            : ''
+                        }
+                        style={{ maxHeight: isExpanded ? '50vh' : 'none' }}
+                      >
+                        <hr className="my-4 border-blue-100" />
+                        {article.sections.map((section, idx) => (
+                          <div key={idx} className="mb-8">
+                            <h3 className="text-lg md:text-xl font-semibold mb-2 text-blue-800">{section.heading}</h3>
+                            {section.content.map((para, i) => (
+                              <p className="mb-4 text-black leading-relaxed text-sm md:text-base" key={i}>{para}</p>
+                            ))}
+                          </div>
+                        ))}
+                        <div>
+                          <h4 className="font-semibold mb-2 text-blue-700 text-base md:text-lg">Sources:</h4>
+                          <ul className="list-disc ml-8 text-black text-xs md:text-sm">
+                            {article.sources.map((src, i) => (
+                              <li key={i}>
+                                {src.url ? (
+                                  <>
+                                    {src.text.split('"')[0]}
+                                    <a
+                                      href={src.url}
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      className="text-blue-600 underline break-all"
+                                    >
+                                      {src.url}
+                                    </a>
+                                    {src.text.split('"').slice(2).join('"')}
+                                  </>
+                                ) : (
+                                  src.text
+                                )}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                );
+              })
+            )}
+          </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
