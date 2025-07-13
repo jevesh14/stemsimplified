@@ -381,7 +381,7 @@ const BreakthroughBriefs = () => {
                     key={article.id}
                     className={
                       `bg-white bg-opacity-95 rounded-2xl border border-blue-200 shadow-lg max-w-4xl xl:max-w-5xl mx-auto transition-colors duration-300 ` +
-                      (isExpanded ? 'ring-2 ring-blue-400 bg-gradient-to-br from-blue-50 via-white to-blue-100' : 'hover:ring-1 hover:ring-blue-200')
+                      (isExpanded ? 'ring-2 ring-blue-400 bg-gradient-to-br from-blue-50 via-white to-blue-100' : 'hover:ring-1 hover:ring-blue-200 hover:scale-105')
                     }
                     style={{ boxShadow: isExpanded ? '0 12px 40px 0 rgba(34, 139, 230, 0.13)' : undefined }}
                   >
