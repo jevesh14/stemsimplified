@@ -322,7 +322,7 @@ const articles = [
     id: 6,
     title: "Automated Labs: Smarter, Faster, and Self-Driven!",
     description: "This breakthrough describes a game-changing AI-powered lab that can run experiments on its own. You'll find out about how the lab works, its importance in the scientific world, and reveals how machines are doing science way better, faster and smarter!",
-    author: "By Disha Maheswari",
+    author: "By Disha Maheshwari",
     sections: [
       {
         heading: "Introduction",
