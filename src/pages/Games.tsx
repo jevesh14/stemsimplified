@@ -345,6 +345,63 @@ const quizzes = [
       }
     ]
   }, 
+  {
+    "id": "automated-labs-smarter-faster",
+    "title": "Automated Labs – Smarter, Faster, and Self-driven!",
+    "description": "Quiz based on the article by Disha Maheshwari.",
+    "questions": [
+      {
+        "question": "What is the main achievement described in the article?",
+        "options": [
+          "Creation of robots that perform surgeries",
+          "Development of a lab that runs experiments without human help",
+          "Invention of a faster chemical formula",
+          "Use of VR headsets for scientific education"
+        ],
+        "correctAnswer": "Development of a lab that runs experiments without human help"
+      },
+      {
+        "question": "Which university developed the self-driving lab?",
+        "options": [
+          "Harvard University",
+          "MIT",
+          "North Carolina State University",
+          "Stanford University"
+        ],
+        "correctAnswer": "North Carolina State University"
+      },
+      {
+        "question": "What helps the lab understand patterns and improve its decisions?",
+        "options": [
+          "Digital thermometers",
+          "Machine learning algorithms",
+          "Lab technicians",
+          "Manual logs"
+        ],
+        "correctAnswer": "Machine learning algorithms"
+      },
+      {
+        "question": "How does the smart lab collect more information than traditional labs?",
+        "options": [
+          "By using microscopes that zoom further",
+          "By hiring more scientists to observe results",
+          "By modifying tests while they are happening",
+          "By repeating each experiment twice"
+        ],
+        "correctAnswer": "By modifying tests while they are happening"
+      },
+      {
+        "question": "What major global benefit could the smart lab contribute to?",
+        "options": [
+          "Curing boredom",
+          "Faster internet",
+          "Solving environmental and human health problems",
+          "Tracking alien life forms"
+        ],
+        "correctAnswer": "Solving environmental and human health problems"
+      }
+    ]
+  },
 ];
 
 const Games = () => {
