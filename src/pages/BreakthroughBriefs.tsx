@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
 import Footer from "@/components/Footer";
+import { useViewCounter } from "@/hooks/useViewCounter";
 
 const articles = [
   {
@@ -449,6 +450,24 @@ const BreakthroughBriefs = () => {
                         if (isExpanded) {
                           setExpandedIds(expandedIds.filter(id => id !== article.id));
                         } else {
+                          // Increment view count when article is expanded
+                          const incrementView = async () => {
+                            try {
+                              const { doc, getDoc, setDoc, updateDoc, increment } = await import("firebase/firestore");
+                              const db = (await import("@/lib/firebase")).default;
+                              const docRef = doc(db, "views", `breakthrough-${article.id}`);
+                              const docSnap = await getDoc(docRef);
+
+                              if (docSnap.exists()) {
+                                await updateDoc(docRef, { count: increment(1) });
+                              } else {
+                                await setDoc(docRef, { count: 1 });
+                              }
+                            } catch (error) {
+                              console.error("Error incrementing view:", error);
+                            }
+                          };
+                          incrementView();
                           setExpandedIds([...expandedIds, article.id]);
                         }
                       }}
@@ -488,6 +507,7 @@ const BreakthroughBriefs = () => {
                         }
                         style={{ maxHeight: isExpanded ? '50vh' : 'none' }}
                       >
+
                         <hr className="my-4 border-blue-100" />
                         {article.sections.map((section, idx) => (
                           <div key={idx} className="mb-8">

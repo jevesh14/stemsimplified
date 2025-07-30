@@ -1,7 +1,11 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { useViewCounter } from "@/hooks/useViewCounter";
 
 const RecentArticles = () => {
+  // Track views for the article (hidden tracking)
+  useViewCounter("recent-healthcare-breath");
+  
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
       <Navbar />

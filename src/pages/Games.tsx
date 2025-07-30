@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
 import Footer from "@/components/Footer";
+import { useViewCounter } from "@/hooks/useViewCounter";
 
 // Multi-quiz data structure
 const quizzes = [
@@ -418,6 +419,27 @@ const Games = () => {
   const quizQuestions = selectedQuiz ? selectedQuiz.questions : [];
 
   const handleStartQuiz = () => {
+    // Track view when quiz is started
+    if (selectedQuizId) {
+      const incrementView = async () => {
+        try {
+          const { doc, getDoc, setDoc, updateDoc, increment } = await import("firebase/firestore");
+          const db = (await import("@/lib/firebase")).default;
+          const docRef = doc(db, "views", `game-${selectedQuizId}`);
+          const docSnap = await getDoc(docRef);
+
+          if (docSnap.exists()) {
+            await updateDoc(docRef, { count: increment(1) });
+          } else {
+            await setDoc(docRef, { count: 1 });
+          }
+        } catch (error) {
+          console.error("Error incrementing view:", error);
+        }
+      };
+      incrementView();
+    }
+    
     setShowQuiz(true);
     setScore(0);
     setCurrentQuestion(0);

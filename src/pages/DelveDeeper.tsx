@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import ReactMarkdown from "react-markdown";
 import Footer from "@/components/Footer";
+import { useViewCounter } from "@/hooks/useViewCounter";
 
 const articles = [
   {
@@ -130,6 +131,9 @@ And just like a trampoline goes down when you step on it, spacetime bends and wa
 ];
 
 const DelveDeeper = () => {
+  // Track views for the article (hidden tracking)
+  useViewCounter("delve-1");
+  
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
       <Navbar />
