@@ -1,40 +1,41 @@
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import HomePage from './pages/HomePage';
+import BreakthroughBriefs from './pages/BreakthroughBriefs';
+import ArticlePage from './pages/ArticlePage';
+import GamesPage from './pages/GamesPage';
+import RequestPage from './pages/RequestPage';
+import AboutPage from './pages/AboutPage';
+import DelveDeeper from './pages/DelveDeeper';
+import DelveDeeperArticlePage from './pages/DelveDeeperArticlePage';
+import './App.css';
 
-import { Toaster } from "@/components/ui/toaster";
-import { Toaster as Sonner } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-
-import Index from "./pages/Index";
-import NotFound from "./pages/NotFound";
-import BreakthroughBriefs from "./pages/BreakthroughBriefs";
-import DelveDeeper from "./pages/DelveDeeper";
-import Games from "./pages/Games";
-import About from "./pages/About";
-import RecentArticles from "./pages/RecentArticles";
-import ArticleRequests from "./pages/ArticleRequests";
-
-const queryClient = new QueryClient();
-
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/breakthrough-briefs" element={<BreakthroughBriefs />} />
-          <Route path="/delve-deeper" element={<DelveDeeper />} />
-          <Route path="/games" element={<Games />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/recent-articles" element={<RecentArticles />} />
-          <Route path="/article-requests" element={<ArticleRequests />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
+function App() {
+  return (
+    <Router>
+      <div className="App min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+        <Navbar />
+        <main>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/articles" element={<BreakthroughBriefs />} />
+            <Route path="/article/:id" element={<ArticlePage />} />
+            <Route path="/games" element={<GamesPage />} />
+            <Route path="/request" element={<RequestPage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/delve-deeper" element={<DelveDeeper />} />
+            <Route path="/delve-deeper/:id" element={<DelveDeeperArticlePage />} />
+          </Routes>
+        </main>
+        <Footer />
+        <ToastContainer position="top-right" autoClose={3000} />
+      </div>
+    </Router>
+  );
+}
 
 export default App;

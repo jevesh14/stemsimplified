@@ -1,159 +1,294 @@
-import Navbar from "@/components/Navbar";
-import ReactMarkdown from "react-markdown";
-import Footer from "@/components/Footer";
-import { useViewCounter } from "@/hooks/useViewCounter";
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { Search, Filter, Calendar, User, Clock, Bookmark, Share2, BookOpen, TrendingUp } from 'lucide-react';
+import AnimatedSection from '../components/AnimatedSection';
 
-const articles = [
-  {
-    id: 1,
-    title: "Time Dilation - The Hidden Side of Time",
-    author: "By Paridhi Gautam",
-    content: `**Time Dilation - The Hidden Side of Time**
+const DelveDeeper: React.FC = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [filterCategory, setFilterCategory] = useState('all');
+  const [sortBy, setSortBy] = useState('newest');
 
-Imagine you and your best friend each have a stopwatch. You stay on Earth, while your friend boards a spaceship that zooms away at nearly the speed of light. A few years later, your friend returns, but while you’ve aged ten years, they’ve aged just two. This is not a sci-fi movie plot. It’s real physics, and it’s called **time dilation**. The faster something moves through space, the slower it moves through time (or at least from the point of view of someone standing still). And yes, this has been proven multiple times.
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
 
-But how is this possible? Isn’t time universal? The truth is, time is very different from what we all think. Time is not absolute. It can stretch and squeeze depending on how fast you’re moving, and Albert Einstein first predicted this phenomenon in 1905.
+  // Real Delve Deeper articles data
+  const articles = [
+    {
+      id: 1,
+      title: "Time Dilation - The Hidden Side of Time",
+      description: "Explore the fascinating world of Einstein's relativity and discover how time itself can stretch and squeeze. From the twin paradox to GPS satellites, uncover the real-world implications of time dilation.",
+      author: "By Paridhi Gautam",
+      category: "physics",
+      readTime: "18 min read",
+      date: "2025-01-20",
+      difficulty: "Intermediate",
+      tags: ["relativity", "physics", "time", "Einstein", "spacetime"]
+    }
+  ];
 
----
+  const categories = ['all', 'physics', 'chemistry', 'biology', 'technology', 'space', 'environment', 'medicine'];
 
-### **The Views on Universal Time**
+  const filteredArticles = articles.filter(article => {
+    const matchesSearch = article.title?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         article.description?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         article.tags?.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+    const matchesCategory = filterCategory === 'all' || article.category === filterCategory;
+    return matchesSearch && matchesCategory;
+  });
 
-For most of history, people believed that time ticked at the same rate everywhere, like a great cosmic clock. Newton’s laws of universal gravitation, which formed the foundation of classical physics, depended on this idea.
+  const handleShare = (articleId: number) => {
+    const article = articles.find(a => a.id === articleId);
+    if (article && navigator.share) {
+      navigator.share({
+        title: article.title,
+        text: article.description,
+        url: window.location.origin + `/delve-deeper/${articleId}`
+      }).catch((error) => {
+        console.log('Error sharing:', error);
+        const shareText = `${article.title}\n\n${article.description}\n\nRead more: ${window.location.origin}/delve-deeper/${articleId}`;
+        navigator.clipboard.writeText(shareText).then(() => {
+          alert('Article link copied to clipboard!');
+        });
+      });
+    } else if (article) {
+      const shareText = `${article.title}\n\n${article.description}\n\nRead more: ${window.location.origin}/delve-deeper/${articleId}`;
+      navigator.clipboard.writeText(shareText).then(() => {
+        alert('Article link copied to clipboard!');
+      });
+    }
+  };
 
-In the early 20th century, scientists discovered something surprising about the nature of light. According to the laws of physics at the time, if you moved toward a light source, the light should appear to move faster, and if you moved away from it, it should appear slower.
-
-Think of it as you’re standing on a dark path that stretches for miles, holding a flashlight. You turn it on, and a beam of light shoots forward. Now, whether you stand still, walk, or run along the path, the light always moves away from you at the exact same speed 299,792,458 meters per second.
-
-This is completely different from what we experience in everyday life. For example, if you throw a ball while standing still and then throw it again while running, the ball moves faster the second time because your motion adds to its speed. But light doesn’t work that way.
-
-No matter how fast you're moving, your speed doesn’t add to or subtract from the speed of light. If light doesn’t care how fast you’re going, then it always travels at the same constant speed.
-
-This strange and unexpected behaviour is what led Einstein to rethink the nature of space and time itself, and ultimately create the theory of relativity. He suggested that the speed of light is a constant of nature, and to make that possible, space and time themselves must shift depending on your motion.
-
-That means time can slow down, lengths can contract, and mass can increase — all to ensure the speed of light never changes, no matter what. Einstein’s breakthrough was to take this strange fact seriously. He proposed the idea: what if the speed of light is constant, but time and space are not?
-
----
-
-### **Time Dilation Due to Motion**
-
-Einstein’s Special Theory of Relativity showed that as you move faster through space, time slows down for you, at least for someone in a different time frame (when seen from someone not moving with you).
-
-This effect is tiny at everyday speeds, but once you get close to the speed of light, it becomes massive.
-
-Also, the famous twin paradox is based on this idea. It imagines two twins, one who stays on Earth while the other travels through space at nearly the speed of light. When the space-travelling twin returns, she is younger than the one who remained on Earth. This isn’t science fiction; it’s a real effect, where time slows down for objects moving at very high speeds.
-
-The reason it's called a paradox is that it looks like, at first, both twins should see the other as moving, so they should both think the other is aging more slowly. But the key difference is that the travelling twin experiences acceleration while leaving, turning around, and coming back, but the Earth twin stays in the same position the whole time. That shift breaks the symmetry and explains why only one twin ages less.
-
-This strange but real phenomenon has been confirmed through precise experiments with atomic clocks, satellites, and high-speed particles in space, showing us that time is not fixed.
-
-There is also a famous thought experiment to visualise this: imagine a spaceship travelling at 90% the speed of light. Inside, there’s a clock that uses a beam of light bouncing between two mirrors to measure time. For the person inside, the light goes straight up and down, like a ping-pong ball. But to someone watching from outside, the spaceship is moving so the light appears to take a zig-zag path — a longer path.
-
-But light can’t speed up. It has to go at the same speed. So if it’s traveling a longer path, it must take longer to complete one tick. Therefore, light has to travel more now, which leads to slowing down of time.
-
----
-
-### **Time Dilation Due to Gravitation Force**
-
-Time slows down in stronger gravity because, as Einstein’s theory of general relativity explained, gravity isn’t just a force pulling objects but it’s actually the bending or warping of space and time itself.
-
-Massive objects like planets and stars curve the fabric of space-time around them due to their heavy weight and large gravitational pull, and this curvature affects how time flows.
-
-The closer you are to a massive object, the more space-time bends, causing time to pass more slowly for you compared to someone farther away. This means clocks, and everything that measures time, run differently depending on how deep you are in a gravitational field.
-
-Although we don’t feel this in everyday life because Earth’s gravity changes very little from place to place, scientists have confirmed the effect using incredibly precise atomic clocks placed at different heights.
-
-Near extremely massive objects like black holes, this time slowdown becomes huge and time can almost appear to stop.
-
-So, time isn’t constant everywhere; it changes depending on how gravity shapes the space around you, making the flow of time flexible rather than fixed.
-
-The event horizon is the boundary around a black hole beyond which nothing, not even light can escape. And black holes have a huge gravitation effect on the fabric of spacetime.
-
-In context with time dilation, the event horizon is a place where gravity becomes so strong that time itself appears to slow down for someone watching from a distance. For an observer far away, it looks like a clock near the event horizon is ticking slower and slower, almost stopping completely as it gets closer. This happens because the intense gravity near the black hole warps space and time a lot.
-
-However, for someone falling into the black hole, time would seem normal to them so they wouldn’t notice anything unusual as they cross the event horizon. This is because they are in that current of warped space so it is the same flow of time for you. This difference in perception shows just how much gravity can bend time.
-
----
-
-### **GPS and Cosmic Clocks**
-
-Time dilation isn’t just theory. This is proved as it affects real technology.
-
-GPS satellites orbit Earth at high speeds. Their clocks tick a tiny bit slower than clocks on Earth. If engineers didn’t account for this, your Google Maps would be off by several kilometers.
-
-Muon particles, created when cosmic rays hit our Earth's atmosphere, decay in microseconds. They shouldn’t reach Earth’s surface — but they do, because they’re moving so fast that their time is slowed.
-
-Also, astronauts on the International Space Station age a little less than people on Earth. It’s very small, but it’s measurable.
-
-In every case, high speed leads to some slow-down in time.
-
----
-
-### **Cosmic Time Dilation and Time Travel**
-
-Cosmic time dilation is the stretching of time across large distances in the universe, especially when observing light from distant galaxies or supernovae.
-
-Because light takes time to travel, everything we see in the cosmos is actually from the past — and the farther away an object is, the older the light we’re seeing.
-
-Also, time itself is stretched due to the expansion of the universe. As space expands, it stretches the wavelength of light, which also stretches the time between each photon arriving, and this is observed as a redshift and longer event durations.
-
-For example, a supernova in a distant galaxy may appear to unfold more slowly than the same event nearby. This isn’t just a perspective; it’s because the fabric of spacetime itself has stretched during the light’s journey, literally dilating the observed flow of time.
-
----
-
-### **Can We Travel to the Future Using Time Dilation?**
-
-Yes, theoretically we can!
-
-If you could get into a spaceship and travel near the speed of light, time would slow down for you compared to everyone back home. You might age just a few years while centuries pass on Earth.
-
-It’s called forward time travel, and it’s completely allowed by the laws of physics.
-
-In relativity, time travel to the future isn’t just theoretical — it’s a built-in feature of how time works at high speeds or in strong gravity.
-
-When you move close to the speed of light, or spend time near an intense gravitational field, time for you slows down relative to others. This means you experience fewer seconds while the outside world ticks on faster.
-
-If you were to return from there, you would find yourself in the future compared to those who stayed behind. This is not a paradox or speculation; it’s a real, measurable effect confirmed by experiments with fast-moving particles and precision clocks in space.
-
-While it doesn’t allow us to jump back into the past, time dilation opens a one-way path forward — making future-skipping travel a physical, if extreme, possibility.
-
-But the only problem we have right now is that reaching those speeds takes unimaginable amounts of energy. Right now, it’s far beyond our technology. But science does not restrict us here.
-
----
-
-### **What Time Dilation Teaches Us About Reality**
-
-Most people think of time as a background like a river that flows no matter what we do. Time dilation tells us that time is part of the structure of the universe — not separate from it — and our actions can manipulate time.
-
-Time and space are linked. Moving through space changes how you move through time. They’re part of the same fabric, and this is what physicists call spacetime.
-
-And just like a trampoline goes down when you step on it, spacetime bends and warps due to motion and gravitational forces. That’s why time isn’t just ticking away and is not isolated.`
-  }
-];
-
-const DelveDeeper = () => {
-  // Track views for the article (hidden tracking)
-  useViewCounter("delve-1");
-  
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
-      <Navbar />
-      <div className="container mx-auto px-4 py-10 max-w-4xl">
-        <h1 className="text-3xl md:text-4xl font-bold text-blue-900 mb-6">Delve Deeper</h1>
-        <p className="text-gray-600 mb-8">
-          In-depth articles exploring complex STEM topics and concepts.
-        </p>
-
-        {articles.map((article) => (
-          <article key={article.id} className="bg-white rounded-lg shadow p-6 mb-10">
-            <h2 className="text-2xl font-bold mb-2">{article.title}</h2>
-            <p className="italic text-sm mb-4">{article.author}</p>
-            <div className="prose prose-lg text-gray-800 whitespace-pre-wrap">
-              <ReactMarkdown>{article.content}</ReactMarkdown>
-            </div>
-          </article>
-        ))}
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 pt-24 pb-12">
+      {/* Floating Orbs */}
+      <div className="fixed inset-0 pointer-events-none z-0">
+        <div className="floating-orb"></div>
+        <div className="floating-orb"></div>
+        <div className="floating-orb"></div>
       </div>
-      <Footer />
+
+      <div className="container mx-auto px-6 max-w-7xl relative z-10">
+        {/* Header Section */}
+        <AnimatedSection>
+          <div className="text-center mb-16">
+            <h1 className="text-5xl md:text-6xl font-bold gradient-text mb-6">
+              Delve Deeper
+            </h1>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+              Comprehensive explorations of complex scientific concepts. 
+              Deep-dive articles for curious minds seeking detailed understanding.
+            </p>
+          </div>
+        </AnimatedSection>
+
+        {/* Search and Filter Section */}
+        <AnimatedSection delay={200}>
+          <div className="glass-card mb-12">
+            <div className="flex flex-col lg:flex-row gap-6 items-center">
+              {/* Search Bar */}
+              <div className="relative flex-1 w-full">
+                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-blue-400 w-5 h-5" />
+                <input
+                  type="text"
+                  placeholder="Search deep-dive articles..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="form-input pl-12 w-full text-blue-700 placeholder-blue-400"
+                />
+              </div>
+
+              {/* Category Filter */}
+              <div className="flex items-center gap-4">
+                <Filter className="w-5 h-5 text-blue-500" />
+                <select
+                  value={filterCategory}
+                  onChange={(e) => setFilterCategory(e.target.value)}
+                  className="form-input min-w-[150px] text-blue-700"
+                >
+                  {categories.map(category => (
+                    <option key={category} value={category}>
+                      {category.charAt(0).toUpperCase() + category.slice(1)}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              {/* Sort Options */}
+              <div className="flex items-center gap-4">
+                <Calendar className="w-5 h-5 text-blue-500" />
+                <select
+                  value={sortBy}
+                  onChange={(e) => setSortBy(e.target.value)}
+                  className="form-input min-w-[150px] text-blue-700"
+                >
+                  <option value="newest">Newest First</option>
+                  <option value="oldest">Oldest First</option>
+                  <option value="popular">Most Popular</option>
+                  <option value="trending">Trending</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </AnimatedSection>
+
+        {/* Articles Section */}
+        {articles.length === 0 ? (
+          <AnimatedSection delay={400}>
+            <div className="text-center py-24">
+              <div className="glass-card max-w-2xl mx-auto">
+                <div className="w-32 h-32 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-8 animate-pulse">
+                  <BookOpen className="w-16 h-16 text-white" />
+                </div>
+                <h2 className="text-3xl font-bold text-blue-700 mb-4">No Deep-Dive Articles Yet</h2>
+                <p className="text-slate-500 text-lg leading-relaxed mb-8">
+                  Our research team is preparing comprehensive deep-dive articles. 
+                  Check back soon for detailed scientific explorations!
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <button className="btn-primary">
+                    <Bookmark className="w-5 h-5 mr-2" />
+                    Get Notified
+                  </button>
+                  <button className="btn-secondary">
+                    Suggest Topic
+                  </button>
+                </div>
+              </div>
+            </div>
+          </AnimatedSection>
+        ) : (
+          <div className="space-y-8">
+            {filteredArticles.map((article, index) => (
+              <AnimatedSection 
+                key={article.id} 
+                delay={index * 150}
+                direction="left"
+              >
+                <div className="glass-card hover-lift group cursor-pointer transition-all duration-300">
+                  <Link to={`/delve-deeper/${article.id}`} className="block">
+                    <div className="flex flex-col lg:flex-row gap-8">
+                      {/* Article Image Placeholder */}
+                      <div className="lg:w-1/3">
+                        <div className="aspect-video bg-gradient-to-br from-purple-400 to-blue-500 rounded-2xl flex items-center justify-center overflow-hidden">
+                          <div className="text-white text-6xl opacity-50">🧬</div>
+                        </div>
+                      </div>
+
+                      {/* Article Content */}
+                      <div className="lg:w-2/3 flex flex-col">
+                        <div className="flex items-start justify-between mb-4">
+                          <div className="flex-1">
+                            <div className="flex items-center gap-3 mb-2">
+                              <span className={`px-2 py-1 rounded-full text-xs font-semibold ${
+                                article.difficulty === 'beginner' ? 'bg-green-100 text-green-700' :
+                                article.difficulty === 'intermediate' ? 'bg-yellow-100 text-yellow-700' :
+                                'bg-red-100 text-red-700'
+                              }`}>
+                                {article.difficulty}
+                              </span>
+                              <TrendingUp className="w-4 h-4 text-blue-500" />
+                            </div>
+                            <h2 className="text-2xl lg:text-3xl font-bold mb-3 text-slate-800 group-hover:text-blue-600 transition-colors duration-300">
+                              {article.title}
+                            </h2>
+                            <p className="text-lg text-slate-600 mb-4 leading-relaxed">
+                              {article.description}
+                            </p>
+                            
+                            {/* Tags */}
+                            <div className="flex flex-wrap gap-2 mb-4">
+                              {article.tags.map((tag, tagIndex) => (
+                                <span 
+                                  key={tagIndex}
+                                  className="px-2 py-1 bg-blue-50 text-blue-600 text-xs rounded-full"
+                                >
+                                  #{tag}
+                                </span>
+                              ))}
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* Article Meta */}
+                        <div className="flex flex-wrap items-center gap-6 text-sm text-slate-500 mb-4">
+                          <div className="flex items-center">
+                            <User className="w-4 h-4 mr-2" />
+                            <span>{article.author}</span>
+                          </div>
+                          <div className="flex items-center">
+                            <Clock className="w-4 h-4 mr-2" />
+                            <span>{article.readTime}</span>
+                          </div>
+                          <div className="flex items-center">
+                            <Calendar className="w-4 h-4 mr-2" />
+                            <span>{article.date}</span>
+                          </div>
+                        </div>
+
+                        {/* Article Actions */}
+                        <div className="flex items-center justify-between">
+                          <div className="flex gap-3">
+                            <button
+                              onClick={(e) => {
+                                e.preventDefault();
+                                e.stopPropagation();
+                                handleShare(article.id);
+                              }}
+                              className="flex items-center px-4 py-2 bg-slate-50 hover:bg-slate-100 text-slate-600 rounded-full transition-colors duration-200"
+                            >
+                              <Share2 className="w-4 h-4 mr-2" />
+                              Share
+                            </button>
+                            <button className="flex items-center px-4 py-2 bg-slate-50 hover:bg-slate-100 text-slate-600 rounded-full transition-colors duration-200">
+                              <Bookmark className="w-4 h-4 mr-2" />
+                              Save
+                            </button>
+                          </div>
+                          
+                          <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
+                            article.category === 'physics' ? 'bg-blue-100 text-blue-700' :
+                            article.category === 'chemistry' ? 'bg-green-100 text-green-700' :
+                            article.category === 'biology' ? 'bg-purple-100 text-purple-700' :
+                            article.category === 'technology' ? 'bg-orange-100 text-orange-700' :
+                            article.category === 'space' ? 'bg-indigo-100 text-indigo-700' :
+                            article.category === 'environment' ? 'bg-emerald-100 text-emerald-700' :
+                            article.category === 'medicine' ? 'bg-pink-100 text-pink-700' :
+                            'bg-blue-100 text-blue-700'
+                          }`}>
+                            {article.category}
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </Link>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+        )}
+
+        {/* No Results Message */}
+        {filteredArticles.length === 0 && articles.length > 0 && (
+          <AnimatedSection>
+            <div className="text-center py-16">
+              <div className="glass-card max-w-lg mx-auto">
+                <h2 className="text-2xl font-bold text-slate-600 mb-4">No matching articles found</h2>
+                <p className="text-slate-500 mb-6">Try adjusting your search terms or filters</p>
+                <button 
+                  onClick={() => {
+                    setSearchTerm('');
+                    setFilterCategory('all');
+                  }}
+                  className="btn-primary"
+                >
+                  Clear Filters
+                </button>
+              </div>
+            </div>
+          </AnimatedSection>
+        )}
+      </div>
     </div>
   );
 };
