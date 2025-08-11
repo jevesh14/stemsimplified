@@ -1,5 +1,6 @@
 import React from 'react';
 import { Github, Instagram, Sparkles, Mail, MapPin, Phone, Heart } from 'lucide-react';
+import logo from './LOGO.jpeg';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -41,11 +42,7 @@ const Footer: React.FC = () => {
           {/* Brand Section */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-3 mb-6">
-            <img 
-              src="src/components/LOGO.jpeg" // Replace with the actual path to your logo
-              alt="STEM Simplified Logo" 
-              className="w-12 h-12 rounded-full" // Adjust size and styling as needed
-            />
+            <img src={logo} alt="STEM Simplified Logo" className="w-12 h-12 rounded-full" />
               <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                 STEM Simplified
               </h3>
