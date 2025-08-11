@@ -1,13 +1,12 @@
 import React from 'react';
-import { Github, Twitter, Instagram, Sparkles, Mail, MapPin, Phone, Heart } from 'lucide-react';
+import { Github, Instagram, Sparkles, Mail, MapPin, Phone, Heart } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { icon: <Twitter className="w-5 h-5" />, href: '#', label: 'Twitter', color: 'hover:bg-blue-500' },
-    { icon: <Instagram className="w-5 h-5" />, href: '#', label: 'Instagram', color: 'hover:bg-pink-500' },
-    { icon: <Github className="w-5 h-5" />, href: '#', label: 'GitHub', color: 'hover:bg-gray-700' },
+    { icon: <Instagram className="w-5 h-5" />, href: 'https://www.instagram.com/stembutsimplified?igsh=MTVoa3d5NXk1NW5uaw==', label: 'Instagram', color: 'hover:bg-pink-500' },
+    { icon: <Github className="w-5 h-5" />, href: 'https://github.com/jevesh14', label: 'GitHub', color: 'hover:bg-gray-700' },
     { icon: <Mail className="w-5 h-5" />, href: 'mailto:jainjevesh@gmail.com', label: 'Email', color: 'hover:bg-green-500' }
   ];
 
