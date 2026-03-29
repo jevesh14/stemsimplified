@@ -409,7 +409,7 @@ const ArticlePage: React.FC = () => {
       ]
     },
     {
-      "id": 6,
+      "id": 7,
       "title": "Fusion Reactors: Accidental Dark Matter Factories?",
       "description": "Imagine if your phone charger accidentally solved world hunger while charging your device. That's basically what physicists just discovered about fusion reactors, except instead of world hunger, it's one of the universe's biggest mysteries.",
       "author": "By Shaurya Sircar",
