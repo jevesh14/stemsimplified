@@ -407,7 +407,70 @@ const ArticlePage: React.FC = () => {
           url: "https://www.sciencedaily.com/releases/2025/07/250714052105.htm"
         }
       ]
-    },  
+    },
+    {
+      "id": 6,
+      "title": "Fusion Reactors: Accidental Dark Matter Factories?",
+      "description": "Imagine if your phone charger accidentally solved world hunger while charging your device. That's basically what physicists just discovered about fusion reactors, except instead of world hunger, it's one of the universe's biggest mysteries.",
+      "author": "By Shaurya Sircar",
+      "sections": [
+        {
+          "heading": "Intro",
+          "content": [
+            "Imagine if your phone charger accidentally solved world hunger while charging your device. That's basically what physicists just discovered about fusion reactors, except instead of world hunger, it's one of the universe's biggest mysteries.",
+            "On December 28, 2025, researchers from the University of Cincinnati published a breakthrough: fusion reactors built for clean energy might also be producing dark matter particles without anyone even trying. The kicker? They figured this out by taking a joke from \"The Big Bang Theory\" seriously. Yeah, the TV show.",
+            "While Sheldon and Leonard failed to solve this problem, real physicists just cracked it. This discovery could mean the same machines powering our cities might also help us understand what 85% of the universe is made of."
+          ]
+        },
+        {
+          "heading": "Breaking It Down",
+          "content": []
+        },
+        {
+          "heading": "What Happened?",
+          "content": [
+            "The University of Cincinnati team, led by physicist Jingzhe Tan, published their findings in Physical Review D after realizing something wild about how fusion reactors work. When fusion reactors smash atoms together, the neutrons released slam into the reactor walls with incredible force, potentially creating particles called axions in the process.",
+            "Axions are one of the leading candidates for what dark matter actually is, and scientists have been trying to find them for decades. The breakthrough? Fusion reactors produce way more potential axions than anyone thought possible—not from the superhot plasma, but from neutron bombardment of the reactor's walls.",
+            "This research directly references an episode of \"The Big Bang Theory\" where the characters tried solving this exact problem and failed so badly they drew a sad face under their equations. The Cincinnati team basically said \"challenge accepted\" and figured out the physics that stumped even fictional geniuses.",
+            "Their calculations show that facilities like ITER (the massive fusion reactor being built in France) could theoretically produce detectable amounts of these mysterious particles once they start running."
+          ]
+        },
+        {
+          "heading": "How Does It Work?",
+          "content": [
+            "Fusion reactors work by heating hydrogen isotopes (deuterium and tritium) to insane temperatures—150 million degrees Celsius, ten times hotter than the sun's core. At these temps, atoms smash together and fuse, releasing neutrons and massive energy.",
+            "These neutrons are absolute speed demons, flying at about 17,000 kilometers per second (roughly 5% the speed of light). When these ultra-fast neutrons crash into the lithium blankets and steel walls surrounding the reactor, two main things can happen.",
+            "First, neutrons get absorbed by atoms in the wall material. Those atoms get super hyped up and need to calm down, usually by releasing gamma rays—but they could also release axions instead.",
+            "Second, when neutrons scatter and slow down, they emit bremsstrahlung radiation (\"braking radiation\" in German). During this process, axions could theoretically be created.",
+            "The key discovery? These processes happen at about a billion neutrons per square centimeter every second in a working fusion reactor. That's an insane number of opportunities to create axions. This neutron-wall interaction produces way more potential axions than the fusion plasma itself ever could, making detection actually feasible for the first time."
+          ]
+        },
+        {
+          "heading": "Why Does It Matter?",
+          "content": [
+            "This discovery is a massive deal for three major reasons.",
+            "First, dark matter is literally the biggest mystery in modern physics. We know it exists because we can see its gravitational effects—it holds galaxies together and shapes how the universe expands. But we've never directly detected a single dark matter particle. It's like knowing someone's in your house because their keys are on the table, but you can't see or hear them anywhere. Finding axions would be the equivalent of finally turning on the lights.",
+            "Second, the practical implications are wild. We're already building fusion reactors worldwide for clean energy—ITER in France, SPARC in the US, and China's EAST reactor. If these facilities can double as dark matter detectors without modifications, we're getting a two-for-one deal: solve the climate crisis AND unlock the universe's secrets with the same machine.",
+            "Third, understanding dark matter would revolutionize our knowledge of how the universe formed after the Big Bang, why galaxies look the way they do, and what's actually out there in the cosmic void between stars. We're talking Nobel Prize-level stuff here.",
+            "Plus, the fact that this came from scientists taking a sitcom seriously shows that inspiration can come from anywhere—even fictional physicists failing at math."
+          ]
+        },
+        {
+          "heading": "Conclusion",
+          "content": [
+            "The intersection of clean energy technology and cosmic mystery-solving is genuinely one of the coolest scientific developments in recent memory. What started as a joke on a TV show turned into legitimate, peer-reviewed physics that could change how we understand the universe.",
+            "The next steps are already in motion: researchers need to set up specialized detectors near fusion reactors to catch these axions if they're being produced. Given that facilities like ITER are scheduled to start operations in the next few years, we might not have to wait long.",
+            "Whether this pans out or not, it's a reminder that sometimes the biggest breakthroughs come from asking \"wait, what if that ridiculous idea actually worked?\" The universe has a sense of humor, and apparently, so do physicists."
+          ]
+        }
+      ],
+      "sources": [
+        { "text": "https://link.springer.com/article/10.1007/JHEP10(2025)215" },
+        { "text": "https://www.uc.edu/news/articles/2025/12/bazinga-uc-physicist-cracks-big-bang-theory-problem.html" },
+        { "text": "https://www.sciencedaily.com/releases/2025/12/251228020014.htm" },
+        { "text": "https://phys.org/news/2025-12-bazinga-physicists-big-theory-problem.html" }
+      ]
+    }
   ];
 
   // Find the specific article by ID
