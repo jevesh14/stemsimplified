@@ -39,7 +39,7 @@ const HomePage: React.FC = () => {
       title: 'Deep Dive Articles',
       description: 'Comprehensive explanations of complex concepts',
       color: 'from-purple-500 to-pink-500',
-      link: '/articles'
+      link: '/delve-deeper'
     },
     {
       icon: <Gamepad2 className="w-8 h-8" />,
