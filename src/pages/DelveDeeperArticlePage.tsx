@@ -153,7 +153,126 @@ const DelveDeeperArticlePage: React.FC = () => {
           ]
         }
       ],
-      sources: []
+      sources: [
+        
+      ]
+    },
+    {
+      id: 2,
+      title: "The Switches of the body - Epigenetics",
+      description: "This article explores epigenetics and how our genes can be turned on or off without changing the DNA itself. It breaks down key mechanisms like DNA methylation, histone modification, and non-coding RNA, while also looking at how everyday factors—like lifestyle, environment, and even experiences from past generations—can shape how our genes behave.",
+      author: "By Unknown",
+      difficulty: "Intermediate",
+      tags: ["biology", "epigenetics", "genetics", "DNA", "health"],
+      keyTakeaways: [
+        "Epigenetics controls which genes are turned on or off without changing DNA",
+        "DNA methylation, histone modification, and non-coding RNA regulate gene activity",
+        "Environmental factors and lifestyle can influence gene expression",
+        "Epigenetic changes can sometimes pass across generations",
+        "Epigenetics plays a role in aging and disease risk"
+      ],
+      sections: [
+        {
+          heading: "Introduction to epigenetics",
+          content: [
+            "Imagine your body had switches to turn on and off any trait you have, deciding which one to activate at any moment. What if I told you.. you don’t have to imagine? Inside every cell in your body, these switches already exist. They don’t change your DNA, but they decide which genes are turned on and which remain turned off. These “switches” are part of a system called epigenetics. By studying epigenetics, scientists aim to understand how our environment and the choices we make influence our genes without altering the DNA itself."
+          ]
+        },
+        {
+          heading: "How epigenetics works",
+          content: [
+            "Inside our cells, epigenetic “switches” work in several ways. One of the main methods is DNA methylation(Scary name, I know, but it’s actually quite simple). Tiny chemical tags called methyl groups attach to DNA and usually block certain genes from working.",
+            "Think of your DNA like folders, with each gene as a specific folder. DNA methylation is like placing a “confidential” stamp on one of them. The folder is still there, but it can’t be opened. In short, DNA methylation directly “locks” a gene, silencing it.",
+            "Another method is histone modification, which changes how tightly DNA is packed. This happens when small chemical tags are added to histone proteins, affecting how strongly DNA is wrapped around them.",
+            "Imagine a kite string wrapped around a spool. When the string is wound tightly, it’s difficult to pull more of it out. But when it’s wrapped more loosely, the string comes out easily. In the same way, when DNA is tightly wrapped around histones, genes are harder to access and stay off. When it’s loosely wrapped, genes become easier to access and can be turned on.",
+            "A third way epigenetics works is through non-coding RNA. These are small molecules that can stop a gene from producing protein even after the DNA is read. Think of them as traffic lights: green allows activity, red stops it, and yellow slows it down.",
+            "While these may seem similar, they act at different stages. DNA methylation locks the gene itself, histone modification controls how accessible it is, and non-coding RNA decides whether the instructions are carried out."
+          ]
+        },
+        {
+          heading: "Epigenetics across generations",
+          content: [
+            "Epigenetics doesn’t just affect you, it can sometimes pass across generations. This means that what your parents or even grandparents experienced can influence how your genes behave.",
+            "One clear example is the Dutch Hunger Winter (1944–45). People exposed to famine before birth developed lasting epigenetic changes in genes linked to growth and metabolism, increasing their risk of obesity and diabetes later in life, with some effects seen in the next generation.",
+            "Studies in animals show similar patterns. Stress, toxins, or poor nutrition in parents can lead to epigenetic changes that are passed down, sometimes affecting the immune system and helping offspring respond to similar environments. While this evidence is strongest in animals, early human studies suggest similar effects may exist."
+          ]
+        },
+        {
+          heading: "Epigenetics and aging",
+          content: [
+            "Aging isn’t just about counting birthdays, your cells are keeping score in their own way. As time passes, epigenetic patterns slowly shift. Some helpful genes quiet down, while others become active when they shouldn’t. Scientists call this epigenetic drift, and over time, it can increase the risk of diseases like cancer, heart disease, and neurodegenerative disorders.",
+            "These changes happen quietly. Chemical tags are added or removed, DNA becomes more tightly or loosely packed, and signals that control stress and inflammation begin to shift. It’s less like something breaking, and more like the system gradually going out of tune.",
+            "To track this, scientists developed the epigenetic clock - a way of measuring how “old” your body really is on the inside. Two people can be the same age, yet have very different biological ages depending on how they live. If your clock runs faster, your risk of disease tends to rise.",
+            "One of the clearest examples comes from identical twins. They start with nearly identical epigenetic patterns, but over time, their lifestyles and environments cause them to drift apart.",
+            "The most hopeful part is that this process isn’t completely fixed. What you eat, how you move, and how you manage stress can influence how fast this clock ticks. Aging isn’t just something that happens to you, it’s something you can influence."
+          ]
+        },
+        {
+          heading: "Why epigenetics matters",
+          content: [
+            "Epigenetics changes how we think about genetics. It shows that while we cannot change the DNA we inherit, we are not completely controlled by it. Instead, our genes respond to how we live like what we eat, how we sleep, and the environment around us.",
+            "It also explains why people with the same DNA can turn out so differently. From the very beginning, epigenetic signals guide cells into becoming brain, muscle, or skin by switching certain genes on and others off. When this system is disrupted, it can lead to disease.",
+            "Over time, everyday choices like diet, stress, and pollution can leave marks on our genes, shaping our risk of conditions like cancer, diabetes, and heart disease, without changing the DNA itself.",
+            "This understanding is already changing medicine. Instead of rewriting DNA, scientists are finding ways to adjust these switches. In some cancers, treatments aim to turn protective genes back on after they’ve been silenced.",
+            "In the end, epigenetics shows that our biology isn’t fixed, it’s responsive, adaptable, and deeply connected to how we live."
+          ]
+        },
+        {
+          heading: "Real-life examples",
+          content: [
+            "Epigenetics can show up in unexpected places, even in something as simple as diet. Certain nutrients like folate and vitamin B12 help add chemical tags to DNA, meaning what you eat can influence how your genes are switched on or off.",
+            "Exercise offers another example. Physical activity can change epigenetic marks in muscle cells, turning on genes that improve energy use and overall health, almost like your body adapting at a genetic level.",
+            "Even sleep patterns play a role. Irregular sleep can alter epigenetic signals linked to metabolism and brain function, helping explain why poor sleep is connected to long-term health issues.",
+            "These examples show that epigenetics isn’t distant or abstract, it’s something quietly responding to the choices we make every day."
+          ]
+        },
+        {
+          heading: "Conclusion",
+          content: [
+            "What if your DNA wasn’t a fixed plan, but something that could be read differently over time?",
+            "Epigenetics shows that biology is not fixed. While our DNA provides the blueprint, our environment, experiences, and choices help decide how that blueprint is used. Rather than being a strict instruction manual, DNA is more like a script that can be interpreted in different ways throughout our lives.",
+            "From how we develop to how we age, our genes are constantly responding and adapting. In the end, who we are is shaped not just by our DNA, but by how our lives interact with it."
+          ]
+        }
+      ],
+      sources: [
+        {
+          text: "Epigenetics & Chromatin | Home page",
+          url: "https://epigeneticsandchromatin.biomedcentral.com/articles"
+        },
+        {
+          text: "PubMed - National Center for Biotechnology Information",
+          url: "https://pubmed.ncbi.nlm.nih.gov/34792705"
+        },
+        {
+          text: "PMC Article - Epigenetic mechanisms and human disease",
+          url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC12204026"
+        },
+        {
+          text: "Dutch famine affected regulation of growth genes",
+          url: "https://www.publichealth.columbia.edu/news/dutch-famine-affected-regulation-growth-genes"
+        },
+        {
+          text: "What you eat could alter your unborn children and grandchildren’s genes and health outcomes",
+          url: "https://theconversation.com/what-you-eat-could-alter-your-unborn-children-and-grandchildrens-genes-and-health-outcomes-221091"
+        },
+        {
+          text: "PMC Article - Epigenetics and inheritance",
+          url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC2579375"
+        },
+        {
+          text: "Evolution - Oxford Academic | Volume 79, Issue 6",
+          url: "https://academic.oup.com/evolut/article/79/6/1033/8069022"
+        },
+        {
+          text: "PMC Article - Epigenetic regulation and disease",
+          url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC8858334"
+        },
+        {
+          text: "PMC Article - Epigenetics and aging mechanisms",
+          url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10593129"
+        }
+      ]
     }
   ];
   

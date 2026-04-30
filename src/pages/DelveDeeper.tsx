@@ -24,6 +24,17 @@ const DelveDeeper: React.FC = () => {
       date: "2025-01-20",
       difficulty: "Intermediate",
       tags: ["relativity", "physics", "time", "Einstein", "spacetime"]
+    },
+    {
+      id: 2,
+      title: "The Switches of the body - Epigenetics",
+      description: "This article explores epigenetics and how our genes can be turned on or off without changing the DNA itself. It breaks down key mechanisms like DNA methylation, histone modification, and non-coding RNA, while also looking at how everyday factors—like lifestyle, environment, and even experiences from past generations—can shape how our genes behave.",
+      author: "By Unknown",
+      category: "biology",
+      readTime: "12-15 min read",
+      date: "2026-05-1",
+      difficulty: "Intermediate",
+      tags: ["biology", "epigenetics", "genetics", "DNA", "health"],
     }
   ];
 
