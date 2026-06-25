@@ -86,7 +86,8 @@ const BreakthroughBriefs: React.FC = () => {
       "date": "2026-3-29",
       "readTime": "5 min read",
       "image": "https://images.unsplash.com/photo-1509395176047-4a66953fd231?w=400&h=300&fit=crop"
-    }
+    },
+    { "id": 8, "title": "The Tropical Butterfly That Might Unlock Longer, Healthier Lives", "description": "What if one of the biggest secrets to a longer life was hidden in a creature no bigger than your hand? Scientists have discovered a group of tropical butterflies that seem to age much slower than expected.", "author": "By Taksh", "category": "biology", "date": "2026-6-22", "readTime": "8-10 mins", "image": "https://images.unsplash.com/photo-1509395176047-4a66953fd231?w=400&h=300&fit=crop" }
   ];
 
   const categories = ['all', 'physics', 'chemistry', 'biology', 'technology', 'space', 'environment'];
